@@ -10,13 +10,6 @@ BASE_DIR = os.path.dirname(__file__)
 FRONTEND_DIR = os.path.join(BASE_DIR, "..", "frontend")
 app.mount("/static", StaticFiles(directory=FRONTEND_DIR), name="static")
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],   # tighten later
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 # --- Sample API ---
 @app.get("/api/health")
