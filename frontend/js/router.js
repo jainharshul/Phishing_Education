@@ -3,6 +3,7 @@ const routes = {
     "/about": "/static/pages/about.html",
     "/page1": "/static/pages/page1.html",   
     "/page2": "/static/pages/page2.html",  
+    "/lesson1": "/static/pages/lesson1.html", 
   };
   
   
