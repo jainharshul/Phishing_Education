@@ -19,16 +19,24 @@
 
     <section>
     <h2>Test Your Knowledge</h2>
+
+    <div class="test">
+        <p id="testText">I am testing a thing</p>
+        <button type="button" onclick="document.getElementById('testText').innerHTML = 'the thing worked'">
+            Click to Change Text
+        </button>
+    </div>
     
     <div class="quiz">
         <!-- Question 1 -->
         <div class="question">
             <h3>1. What is the main goal of a phishing attack?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
             <div class="options">
-                <label><input type="radio" name="q1" value="a"> a) To make your computer run faster<br></label>
-                <label><input type="radio" name="q1" value="b"> b) To sell you a new product legally<br></label>
-                <label><input type="radio" name="q1" value="c"> c) To trick you into giving away information, money, or computer access<br></label>
-                <label><input type="radio" name="q1" value="d"> d) To help you update your passwords<br></label>
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a. To make your computer run faster<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b. To sell you a new product legally<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c. To trick you into giving away information, money, or computer access<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d. To help you update your passwords<br></label>
             </div>
             <div id="result-q1" class="result"></div>
         </div>
@@ -36,11 +44,12 @@
         <!-- Question 2 -->
         <div class="question">
             <h3>2. Maria receives an email saying her bank account is locked. She feels a rush of panic and clicks the link in the email to "fix it immediately." What is the "bait" in this phishing attempt?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
             <div class="options">
-                <label><input type="radio" name="q2" value="a"> a) The link she clicked<br></label>
-                <label><input type="radio" name="q2" value="b"> b) The news that her account is locked<br></label>
-                <label><input type="radio" name="q2" value="c"> c) Her bank's name<br></label>
-                <label><input type="radio" name="q2" value="d"> d) Her feeling of panic<br></label>
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a. The link she clicked<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b. The news that her account is locked<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c. Her bank's name<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d. Her feeling of panic<br></label>
             </div>
             <div id="result-q2" class="result"></div>
         </div>
@@ -48,15 +57,14 @@
         <!-- Question 3 -->
         <div class="question">
             <h3>3. Phishing is a type of "social engineering." What does this mean?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
             <div class="options">
-                <label><input type="radio" name="q3" value="a"> a) It uses advanced software to hack any system<br></label>
-                <label><input type="radio" name="q3" value="b"> b) It involves posting on social media<br></label>
-                <label><input type="radio" name="q3" value="c"> c) It uses psychological tricks to manipulate people<br></label>
-                <label><input type="radio" name="q3" value="d"> d) It only happens on social networking sites<br></label>
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a. It uses advanced software to hack any system<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b. It involves posting on social media<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c. It uses psychological tricks to manipulate people<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d. It only happens on social networking sites<br></label>
             </div>
             <div id="result-q3" class="result"></div>
         </div>
     </div>
 </section>
-
-  
