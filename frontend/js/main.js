@@ -12,3 +12,5 @@ window.addEventListener("DOMContentLoaded", () => {
   mount("footer", renderFooter());
   initRouter();
 });
+
+
