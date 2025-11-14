@@ -1,1 +1,39 @@
-﻿<h1>email7</h1>
+﻿<section>
+    <h1>Phishing Email Analysis</h1>
+    <section>
+        <h2>Analyze this email:</h2>
+        
+        <div class="email-example" >
+            <p><strong>Subject:</strong> Security Alert: Unusual Sign-in Attempt</p>
+            <p><strong>From:</strong> no-reply@globalcorp-support.info</p>
+            <p><strong>Date:</strong> 2025-10-30 07:32</p>
+            <hr>
+            <p>Dear Customer,</p>
+            <p>We detected an issue that requires your immediate attention. Please verify your account by clicking the following secure link:</p>
+            <p>https://secure-auth.example/verify/183521</p>
+            <p>Failure to act within 24 hours may result in account suspension.</p>
+            <p>Regards,<br>
+            Support Team</p>
+        </div>
+
+        <div class="quiz">
+            <h3>Is this email phishing or legitimate?</h3>
+            <div id="feedback" style="height: 80px; margin-bottom: 20px;"></div>
+            <div class="options" style="text-align: center;">
+                <button onclick="document.getElementById('feedback').innerHTML = '<span style=color:green;font-weight:bold>Correct: </span>Phishing indicators: urgent language, unfamiliar sender domain that mimics a real company, a single point-of-action URL (often masked), threats of suspension, and lack of personalized account details. Technical signs would include mismatched SPF/DKIM, recent domain registration, and URL pointing to a different registrar or IP than the legitimate brand.'" style="padding: 10px 20px; margin: 0 10px; background-color: #dc3545; color: white; border: none; border-radius: 5px;">Phishing</button>
+                <button onclick="document.getElementById('feedback').innerHTML = '<span style=color:red;font-weight:bold>Incorrect: </span>Phishing indicators: urgent language, unfamiliar sender domain that mimics a real company, a single point-of-action URL (often masked), threats of suspension, and lack of personalized account details. Technical signs would include mismatched SPF/DKIM, recent domain registration, and URL pointing to a different registrar or IP than the legitimate brand.'" style="padding: 10px 20px; margin: 0 10px; background-color: #28a745; color: white; border: none; border-radius: 5px;">Non-Phishing</button>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px; text-align: center;">
+            <a class="btn" href="#" onclick="goToRandomEmail(); return false;" style="width:100%; padding:.5rem; text-align:center; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; display: inline-block;">Go to next random email</a>
+        </div>
+    </section>
+</section>
+
+<script>
+function goToRandomEmail() 
+{
+    window.location.reload();
+}
+</script>

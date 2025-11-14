@@ -1,1 +1,38 @@
-﻿<h1>email68</h1>
+﻿<section>
+    <h1>Phishing Email Analysis</h1>
+    <section>
+        <h2>Analyze this email:</h2>
+        
+        <div class="email-example" >
+            <p><strong>Subject:</strong> Weekly Newsletter — Security</p>
+            <p><strong>From:</strong> billing@contoso.com</p>
+            <p><strong>Date:</strong> 2025-11-01 18:19</p>
+            <hr>
+            <p>Hello Customer,</p>
+            <p>Your invoice 48630 for services with Acme Bank is now available in your account. You can view and download the PDF from your secure portal.</p>
+            <p>No action is required if you have already scheduled payment.</p>
+            <p>Best regards,<br>
+            Billing Team</p>
+        </div>
+
+        <div class="quiz">
+            <h3>Is this email phishing or legitimate?</h3>
+            <div id="feedback" style="height: 80px; margin-bottom: 20px;"></div>
+            <div class="options" style="text-align: center;">
+                <button onclick="document.getElementById('feedback').innerHTML = '<span style=color:red;font-weight:bold>Incorrect: </span>Legitimate indicators: consistent corporate sender domain, contextual references (invoice number and customer name), no threatening urgency, and instruction to use the official portal rather than a direct generic link. Operationally, SPF/DKIM align with the sending domain and the message includes contextual metadata such as invoice ID.'" style="padding: 10px 20px; margin: 0 10px; background-color: #dc3545; color: white; border: none; border-radius: 5px;">Phishing</button>
+                <button onclick="document.getElementById('feedback').innerHTML = '<span style=color:green;font-weight:bold>Correct: </span>Legitimate indicators: consistent corporate sender domain, contextual references (invoice number and customer name), no threatening urgency, and instruction to use the official portal rather than a direct generic link. Operationally, SPF/DKIM align with the sending domain and the message includes contextual metadata such as invoice ID.'" style="padding: 10px 20px; margin: 0 10px; background-color: #28a745; color: white; border: none; border-radius: 5px;">Non-Phishing</button>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px; text-align: center;">
+            <a class="btn" href="#" onclick="goToRandomEmail(); return false;" style="width:100%; padding:.5rem; text-align:center; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; display: inline-block;">Go to next random email</a>
+        </div>
+    </section>
+</section>
+
+<script>
+function goToRandomEmail() 
+{
+    window.location.reload();
+}
+</script>
