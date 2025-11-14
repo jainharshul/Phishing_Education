@@ -1,3 +1,64 @@
 <section>
-    <h1>Lesson56</h1>
+    <h1>Lesson 56</h1>
+    <section>
+    <h1>Email Header Spoofing Defense</h1>
+    
+    <p>Email header manipulation remains the foundation of countless phishing campaigns. By forging "From" and "Reply-To" fields or hijacking legitimate relay servers, attackers trick recipients into believing a message originates internally. Defending against header spoofing requires both technological enforcement and administrative tuning.</p>
+    
+    <p>Three authentication protocols form the backbone: SPF, DKIM, and DMARC.</p>
+    
+    <p>Sender Policy Framework (SPF) authorizes which IP addresses can send mail for a domain, enabling receiving servers to reject messages from unauthorized hosts.</p>
+    
+    <p>DomainKeys Identified Mail (DKIM) attaches cryptographic signatures to headers, ensuring integrity and origin authenticity.</p>
+    
+    <p>Domain-based Message Authentication, Reporting, and Conformance (DMARC) unites both, defining policies for how receivers should treat failures and generating reports that provide visibility into abuse attempts.</p>
+    
+    <p>Advanced filters perform these validations automatically, augmenting them with reputation scoring, reverse-DNS checks, and anomaly detection on routing paths. Machine-learning models compare observed "Received" chains against historical baselines to spot improbable geographic hops or latency patterns inconsistent with normal mailflow.</p>
+    
+    <p>Administrators fine-tune enforcement gradually: starting with "none" policies to gather data, then progressing to "quarantine" and finally "reject" once legitimate senders are aligned. Continuous monitoring of DMARC aggregate reports highlights shadow IT or third-party services sending without authorization.</p>
+    
+    <p>User-facing education completes the circuit. Awareness materials explain why some legitimate messages may be quarantined and how authentication failures indicate potential compromise. In combination, these layers render spoofing increasingly expensive and ineffective. The email header—once an attacker's disguise—becomes an audited trail of trust that modern infrastructure verifies at every hop.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. What are the three core authentication protocols that form the backbone of email header spoofing defense?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) SSL, TLS, and HTTPS<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) SPF, DKIM, and DMARC<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) HTTP, FTP, and SMTP<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) DNS, WHOIS, and IP<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. What is the recommended approach for administrators implementing DMARC policies?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Immediately implementing "reject" policies for all domains<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) Gradual progression from "none" to "quarantine" to "reject"<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) Using only "none" policies indefinitely<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Eliminating DMARC implementation entirely<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. How do modern systems transform the role of email headers in security?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) By eliminating headers entirely from email systems<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) By turning headers into an audited trail of trust verified at every hop<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) By making headers completely invisible to security systems<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Through manual review of every email header<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+    </div>
 </section>

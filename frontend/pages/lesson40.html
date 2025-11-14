@@ -1,3 +1,56 @@
 <section>
-    <h1>Lesson40</h1>
+    <h1>Lesson 40</h1>
+    <section>
+    <h1>Image-Based Phishing Detection</h1>
+    
+    <p>Attackers increasingly embed textual content within images to bypass NLP-based filters. Entire emails may consist of a single PNG or JPEG that visually imitates a corporate notice while containing no extractable text. Traditional scanners, seeing only an image, label it benign. Image-based phishing detection closes this blind spot through computer vision and OCR technologies integrated into the pipeline.</p>
+    
+    <p>The first step is image classification. CNN-based detectors recognize known brand logos, color palettes, and layout geometry associated with phishing templates. When an image's visual signature matches previous campaigns or suspicious brand composites, it is flagged for deeper inspection. Next, Optical Character Recognition (OCR) converts the embedded text into machine-readable form. The extracted text undergoes the same NLP analysis—tokenization, embedding, and semantic scoring—as any normal email body. This dual modality allows the system to assess both what the image says and how it looks.</p>
+    
+    <p>Advanced systems further analyze metadata and pixel behavior. Steganographic payloads, anomalous compression ratios, or hyperlinks hidden behind image maps are inspected. Visual-similarity models compare screenshots against legitimate brand pages, quantifying deviation. To counter dynamic image generation by attackers, detection models employ Siamese networks that learn perceptual similarity rather than pixel identity, catching visually equivalent clones.</p>
+    
+    <p>Operationally, image processing is computationally expensive, so the pipeline prioritizes triggers: emails with a single large image and minimal text, or messages containing inline images with hyperlink overlays, are routed to vision modules. The integration of OCR and vision into email defense bridges a crucial gap—transforming inert pixels into analyzable data and ensuring that visual deception, one of the most persistent evasion tactics, becomes yet another measurable and mitigable signal.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. Why do attackers embed textual content within images in phishing emails?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) To improve email loading speed<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) To bypass NLP-based filters<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) To enhance visual appeal for legitimate marketing<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) To reduce file size for faster delivery<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. What dual approach does image-based phishing detection use to analyze suspicious images?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) File size analysis and compression checking<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) Computer vision for visual patterns and OCR for text extraction<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) Manual review and automated blocking<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Encryption analysis and metadata inspection<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. How do detection systems handle the computational expense of image processing?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) By processing all images with equal priority<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) By eliminating image analysis entirely<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) By prioritizing triggers like single large images with minimal text<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) By using only basic file type checking<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+    </div>
 </section>

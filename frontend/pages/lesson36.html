@@ -1,3 +1,58 @@
 <section>
-    <h1>Lesson36</h1>
+    <h1>Lesson 36</h1>
+    <section>
+    <h1>Model Evaluation and Accuracy</h1>
+    
+    <p>Evaluating a phishing-detection model is not an afterthought; it is the governing discipline that determines whether automation can be trusted to make security decisions that directly affect business continuity. A detection engine that has not been exhaustively validated will either cripple productivity through false alarms or silently allow compromise. In high-stakes enterprise environments, evaluation becomes a living process—continuous, quantitative, and auditable.</p>
+    
+    <p>The cornerstone of this process is understanding and measuring precision, recall, and the F1-score. Precision measures how many alerts are genuinely malicious. High precision minimizes user frustration and helps security teams focus their effort. Recall quantifies how many actual phishing emails are successfully intercepted. A model with low recall misses attacks and erodes confidence in the defense stack. The F1-score, as their harmonic means, balances aggressiveness and conservatism, giving a single, intuitive indicator of overall discriminative power. Yet these three metrics only form the visible surface of a much broader evaluation framework.</p>
+    
+    <p>Real-world datasets are inherently imbalanced—phishing comprises a fraction of one percent of total traffic—so metrics such as Area Under the Precision-Recall Curve, Matthews Correlation Coefficient, and Balanced Accuracy become critical. Temporal validation, where models are trained on historical data and tested on future windows, reveals how quickly performance decays under concept drift. Confusion matrices are mined to identify systematic blind spots: for instance, multilingual campaigns or supplier invoice forgeries that mimic routine correspondence.</p>
+    
+    <p>Equally important is operational validation. Models are deployed in a controlled "shadow" mode where predictions are recorded but not enforced, allowing side-by-side comparison with existing filters. This stage measures latency, throughput, and stability under live load. Explainability testing—via SHAP, LIME, or counterfactual analysis—ensures that decisions can be rationalized to auditors and security analysts, satisfying regulatory expectations for transparency.</p>
+    
+    <p>Perfect accuracy is a mathematical impossibility. Attackers pivot continuously, altering language, structure, and hosting infrastructure. Hence, evaluation must be recursive. Continuous monitoring pipelines feed telemetry—user "report phishing" actions, false-positive releases, post-incident forensics—back into analytics dashboards that recompute live metrics. Thresholds are automatically adjusted to maintain optimal trade-offs. Periodic retraining is mandatory, not optional, and red-team simulations supply adversarial examples to test robustness against manipulation.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. What is the primary purpose of model evaluation in phishing detection?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) To eliminate the need for human analysts<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) To determine if automation can be trusted for security decisions<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) To achieve perfect accuracy in detection<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) To simplify the detection process<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. Which metric balances aggressiveness and conservatism by providing a single indicator of overall discriminative power?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Precision alone<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) Recall alone<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) F1-score<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Accuracy<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. Why is periodic retraining of detection models considered mandatory?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) To reduce computational costs<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) To eliminate the need for evaluation<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) To maintain performance as attackers continuously adapt their tactics<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) To simplify model architecture<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+    </div>
 </section>

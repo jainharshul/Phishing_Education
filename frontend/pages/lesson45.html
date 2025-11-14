@@ -1,3 +1,60 @@
 <section>
-    <h1>Lesson45</h1>
+    <h1>Lesson 45</h1>
+    <section>
+    <h1>Data Labeling for Model Training</h1>
+    
+    <p>Machine learning, despite its automation, begins with human judgment. A classifier is only as intelligent as the data that shapes it, and that data must be labeled—precisely, consistently, and at scale. Data labeling in phishing detection is a labor-intensive but indispensable stage, converting raw communication streams into curated knowledge for supervised learning.</p>
+    
+    <p>The process starts with corpus collection: millions of emails gathered from enterprise mail flows, spam traps, threat-intelligence exchanges, and open-source datasets. Each message must be assigned a label—"phishing," "benign," or occasionally "gray-zone." Human analysts review headers, body content, URLs, and attachments to determine intent. This classification requires subject-matter expertise: analysts recognize subtleties that automation may overlook, such as spoofed tone or forged signatures.</p>
+    
+    <p>Consistency is critical. Annotators follow detailed labeling guides defining criteria—credential request, payload delivery, impersonation indicators—to reduce subjectivity. Multi-layer review, where independent analysts validate each other's decisions, eliminates bias. Quality-control metrics, such as inter-annotator agreement (Cohen's Kappa), quantify labeling reliability.</p>
+    
+    <p>Given the enormous data volume, pure manual labeling is unsustainable. Modern frameworks employ semi-supervised learning and active learning to amplify efficiency. In semi-supervised setups, a small labeled subset trains an initial model that predicts labels for the unlabeled corpus. Analysts then verify uncertain cases rather than reviewing everything, progressively refining accuracy. Active learning systems present the model's most ambiguous samples for human review, focusing effort where it yields maximum gain.</p>
+    
+    <p>Annotation platforms are secured to protect privacy. Sensitive fields (names, emails, financial data) are anonymized or tokenized before human access. Legal compliance, especially under GDPR and HIPAA, requires that no personal identifiers remain visible beyond the labeling environment.</p>
+    
+    <p>Ultimately, labeled data is not static—it must evolve alongside threats. Periodic audits prune outdated examples and add emerging phishing archetypes. Metadata—campaign family, target industry, linguistic region—enhances downstream model interpretability. High-quality labeling transforms messy, unstructured email corpora into structured intelligence, allowing algorithms to learn the difference between persuasive business communication and social-engineering deception with near-human intuition.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. Why is data labeling considered indispensable for machine learning in phishing detection?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) It eliminates the need for human analysts entirely<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) It converts raw communication streams into curated knowledge for supervised learning<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) It makes machine learning models completely autonomous<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) It focuses only on technical aspects of email headers<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. How do modern frameworks address the challenge of labeling enormous data volumes?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) By eliminating the need for human review entirely<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) Through semi-supervised and active learning that focuses human effort on uncertain cases<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) By using only automated labeling without verification<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) By reducing the amount of data used for training<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. What is the ultimate outcome of high-quality data labeling in phishing detection?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Elimination of all false positives in detection<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) Transformation of unstructured email data into structured intelligence for near-human intuition<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) Complete automation of the entire security process<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Focus on technical features only while ignoring content<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+    </div>
 </section>

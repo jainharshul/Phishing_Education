@@ -1,3 +1,66 @@
 <section>
     <h1>Lesson15</h1>
+    <section>
+    <h1>Finding Links in the Raw Source</h1>
+    
+    <p>When you look at a phishing email in your inbox, a link might look safe because it says "Click Here to Secure Your Account." However, the real, dangerous destination is hidden in the email's code. To see the truth, you need to examine the link in the email's raw source, where you can't be tricked by the visible text.</p>
+    
+    <p>In the raw source, links are written in a code called HTML. They look like this: &lt;a href="http://malicious-website.com"&gt;Click Here to Secure Your Account&lt;/a&gt;. The part you see in your email is the "Click Here" text. The important part is the href= value inside the quotation marks. This is the actual web address you will go to if you click. A phisher can make the visible text look completely legitimate while the href points to a dangerous fake website.</p>
+    
+    <p>Phishers also often use link shortening services like Bitly to hide their malicious addresses. A link might just show as "bit.ly/abc123," which gives you no clue where it leads. To reveal the true destination, you can use a URL expander website. A simple trick for Bitly links is to just add a plus sign (+) to the end of the URL in your browser's address bar. For example, if you type bit.ly/xyz+ and press enter, it will take you to a Bitly page that shows you the full, real website address before you visit it. This allows you to check if the link is safe without ever clicking on it.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. In the raw HTML source of an email, where is the actual, dangerous web address of a hyperlink located?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> a) In the href= attribute inside the &lt;a&gt; tag.<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) In the visible text that says "Click Here."<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) In the email's "Subject" header.<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) In the "From" address of the sender.<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. A link in an email displays the text "View Your Invoice." In the raw source, the code is: &lt;a href="http://fake-login.net"&gt;View Your Invoice&lt;/a&gt;. What will happen if you click this link?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) You will go to a legitimate invoice website.<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) You will go to the website http://fake-login.net.<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) The email will automatically forward to your IT department.<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Nothing will happen because the link is broken.<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. Why do phishers often use link shortening services like Bitly?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) To make their emails load faster.<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) To improve the website's search engine ranking.<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) To hide the malicious web address from the recipient.<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) To comply with international email regulations.<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>4. What is a simple method to reveal the true destination of a Bitly shortened link without clicking on it?</h3>
+            <div id="feedback-q4" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> a) Add a plus sign (+) to the end of the Bitly URL and visit that page.<br></label>
+                <label><input type="radio" name="q4" value="b" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) Hover your mouse over the link for three seconds.<br></label>
+                <label><input type="radio" name="q4" value="c" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) Reply to the email and ask for the full link.<br></label>
+                <label><input type="radio" name="q4" value="d" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) There is no way to see the destination without clicking.<br></label>
+            </div>
+            <div id="result-q4" class="result"></div>
+        </div>
+    </div>
 </section>

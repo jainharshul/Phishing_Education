@@ -1,3 +1,66 @@
 <section>
     <h1>Lesson17</h1>
+    <section>
+    <h1>Punycode for Homograph Attacks/IDN Homograph attack</h1>
+    
+    <p>A sophisticated phishing trick involves creating fake website addresses that look identical to real ones. This is called a homograph attack, and it works by exploiting international domain names (IDN). Because the internet supports different languages, attackers can register domains using foreign characters that look exactly like English letters.</p>
+    
+    <p>For example, the real domain is apple.com. An attacker could create a fake domain that looks the same to the human eye, but is actually spelled using Cyrillic characters: аррӏе.com. In your email, the link might show the perfectly convincing text "Click here to go to apple.com," but the underlying href code points to the fake, international domain.</p>
+    
+    <p>To see the real address and spot this trick, you must look at the link in the email's raw source. In the raw code, international domains are converted into a special format called "Punycode," which begins with xn--. A legitimate link to apple.com will just show apple.com in the source. A homograph attack will show a confusing string like xn--80ak6aa92e.com instead of the expected domain name. If you see "xn--" in a link for a company that shouldn't need international characters, it is a major red flag. Always ask if the domain name makes sense, as these attacks rely on you trusting what you see at a quick glance.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. What is the primary goal of an IDN homograph attack?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) To make a website load faster in different countries.<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) To create a fake domain name that looks visually identical to a real one.<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) To translate website content automatically into other languages.<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) To encrypt the connection between the user and the website.<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. How can an attacker make a domain like "apple.com" look legitimate but be fake?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) By using a capital 'A' at the beginning.<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) By using foreign characters that are visually identical to the English letters.<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) By adding "https://" to the beginning of the address.<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) By registering the domain "apple-company.com".<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. In the raw source code of an email, how is an international domain name (IDN) for a homograph attack typically represented?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) As a simple IP address like 192.168.1.1<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) As a shortened link using a service like Bitly.<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) It will always appear exactly as it does in the visible text.<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> d) With a "Punycode" format that begins with "xn--".<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>4. You are checking the raw source of a suspicious email. A link that appears to go to "paypal.com" has an href value of http://xn--pypl-6ve.com. What does this most likely indicate?</h3>
+            <div id="feedback-q4" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) This is the legitimate, secure website for PayPal.<br></label>
+                <label><input type="radio" name="q4" value="b" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) PayPal uses this special code for its mobile website.<br></label>
+                <label><input type="radio" name="q4" value="c" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) The email client has corrupted the link address.<br></label>
+                <label><input type="radio" name="q4" value="d" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> d) This is a homograph attack using a fake domain disguised as PayPal's.<br></label>
+            </div>
+            <div id="result-q4" class="result"></div>
+        </div>
+    </div>
 </section>

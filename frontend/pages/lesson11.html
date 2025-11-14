@@ -1,3 +1,68 @@
 <section>
     <h1>Lesson11</h1>
+    <section>
+    <h1>Email Raw Source</h1>
+    
+    <p>To truly investigate a suspicious email, you need to look at its "raw source." This is the complete, technical version of the email, exactly as it was received by your mail server. It contains all the hidden details that you don't see in the normal inbox view. Learning to access this information is a key skill for spotting sophisticated fakes.</p>
+    
+    <p>The way you find the raw source is different for each email program. In Gmail, you open the email, click the three dots next to the reply button, and select "Show original." In Outlook on your desktop, you open the email in its own window, go to File, then Properties, and look in the "Internet headers" box. In Apple Mail, you select the email and then choose View, then Message, then Raw Source from the top menu.</p>
+    
+    <p>When you open the raw source, you will see a lot of text. This includes the email's "headers," which are like a travel log, and the "body," which is the message content in its raw code form. The headers show the path the email took and who sent it. You don't need to understand everything, just a few key fields.</p>
+    
+    <p>Look for important fields like "From," "To," and "Subject." Also, look for the "Return-Path," which can be different from the "From" address and is a red flag. The most important part is the "Received" fields. You read these from the bottom to the top. The very bottom "Received" line shows the email's first step onto the internet, which can reveal its true origin and help you see if it's from a legitimate source or a fake one.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. What is the "raw source" of an email?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> a) The complete, technical version of the email as it was received by the mail server.<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) The subject line of the email.<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) The list of people who were CC'd on the message.<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) The main text body of the message that you can read.<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. In the Gmail application, what is the correct way to view the raw source of an email?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Go to File → Properties.<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) Select View → Message → Raw Source.<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) Click the three dots next to the reply button and select "Show original."<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Forward the email to a special address.<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. The raw source contains "headers." What kind of information do these headers provide?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Only the "To" and "From" addresses.<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) A travel log showing the path the email took and technical details about the sender.<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) A list of all the images used in the email.<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) The password of the sender.<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>4. According to the lesson, how should you read the list of "Received" fields in the email headers to find the true origin?</h3>
+            <div id="feedback-q4" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Read them from the top to the bottom.<br></label>
+                <label><input type="radio" name="q4" value="b" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) Only read the very top one.<br></label>
+                <label><input type="radio" name="q4" value="c" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) The "Received" fields are not important for investigation.<br></label>
+                <label><input type="radio" name="q4" value="d" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> d) Read them from the bottom to the top.<br></label>
+            </div>
+            <div id="result-q4" class="result"></div>
+        </div>
+    </div>
 </section>

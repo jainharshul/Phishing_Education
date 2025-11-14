@@ -1,3 +1,66 @@
 <section>
     <h1>Lesson19</h1>
+    <section>
+    <h1>Spoofing & Impersonation</h1>
+    
+    <p>A core tactic in phishing is spoofing, which means faking the sender's information to look like someone you trust. Attackers primarily use two methods to do this: display name spoofing and domain spoofing. Understanding both is crucial for spotting fakes.</p>
+    
+    <p>Display name spoofing is the simplest trick. The attacker sets the "From" field's display name to a trusted entity, like "Microsoft Support" or your boss's name. However, if you look at the actual email address next to it, it will be something completely different, like service123@gmail.com. Always look at the full email address, not just the friendly name.</p>
+    
+    <p>Domain spoofing is more advanced. Here, the attacker forges the actual "From" address to look like it's coming from a real company's domain. They can't actually send from the real domain, but they can make it appear that way in your inbox. This is why you must carefully check for subtle misspellings in the domain name itself. For example, a phisher might use paypa1.com (with the number '1') instead of the real paypal.com, or micr0soft.com (with a zero) instead of microsoft.com. Your brain might read it correctly, but the computer sees a completely different, fake website.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. What is the key difference between display name spoofing and domain spoofing?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Display name spoofing is illegal, while domain spoofing is not.<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) Domain spoofing only works in text messages, not email.<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) Display name spoofing is more dangerous than domain spoofing.<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> d) Display name spoofing fakes the sender's friendly name, while domain spoofing fakes the actual email address.<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. An email arrives where the display name shows "Netflix Billing," but the actual sender's address is support@secure-client.net. What type of spoofing is this?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Domain Spoofing<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) Display Name Spoofing<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) Link Spoofing<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) This is not spoofing; it is a legitimate email.<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. You receive an email that appears to be from Amazon. Which of the following sender addresses is most likely a domain spoofing attempt?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) support@amazon.com<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) amazon@newsletter.com<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) security@amaz0n.com (with a zero)<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) no-reply@amazon.secure.com<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>4. The lesson warns that attackers use domains with subtle misspellings. What is the best defense against this trick?</h3>
+            <div id="feedback-q4" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> a) Carefully read the entire domain name in the sender's address, looking for character substitutions.<br></label>
+                <label><input type="radio" name="q4" value="b" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) Only open emails from people in your contacts list.<br></label>
+                <label><input type="radio" name="q4" value="c" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) Trust that your email filter will always catch these fakes.<br></label>
+                <label><input type="radio" name="q4" value="d" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Assume that any email from a large company is safe.<br></label>
+            </div>
+            <div id="result-q4" class="result"></div>
+        </div>
+    </div>
 </section>

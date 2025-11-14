@@ -1,3 +1,58 @@
 <section>
-    <h1>Lesson51</h1>
+    <h1>Lesson 51</h1>
+    <section>
+    <h1>AI-Generated Phishing Content</h1>
+    
+    <p>The emergence of generative language models has altered the economics of cybercrime. What once required fluent English, social-engineering skill, and manual drafting can now be automated at scale. Attackers feed a few prompts—"invoice overdue," "reset account password"—and generate thousands of grammatically perfect, contextually credible variations. This AI-generated phishing content overrides the linguistic red flags that traditional filters relied upon for decades.</p>
+    
+    <p>Because these emails lack obvious errors, defenders must shift from keyword-centric detection to intent-centric inference. Models need to evaluate semantics, pragmatics, and emotional framing rather than surface vocabulary. Transformer architectures fine-tuned for intent recognition analyze tone ("urgent," "authoritative," "fearful"), narrative coherence, and entity relationships—inferring whether the message structure resembles a request for credentials, financial transfer, or policy exception.</p>
+    
+    <p>Adversaries also weaponize large-scale paraphrasing. They generate minor lexical changes across identical campaigns, producing infinite text diversity. To counter this, defense models rely on semantic hashing and embedding similarity—mapping messages into high-dimensional vector spaces where similar meanings cluster regardless of wording. A campaign's variants, though lexically distinct, occupy the same semantic neighborhood and are blocked collectively.</p>
+    
+    <p>Security teams increasingly deploy their own defensive language models—trained to classify tone, persuasion strategy, and sentiment manipulation. These systems act like psychological profilers, flagging correspondence that exerts undue authority or invokes artificial urgency. Combining textual semantics with metadata—time of day, sender reputation, message threading—produces richer context.</p>
+    
+    <p>Policy implications are equally critical. As AI democratizes social engineering, the barrier to entry for phishing collapses. Organizations must treat generative models as dual-use technology: powerful for defense yet exploitable for offense. Continuous monitoring, red-team simulations using AI-generated lures, and collaborative model sharing across vendors will define the next generation of linguistic cybersecurity.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. How has AI-generated content changed the phishing threat landscape?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) It has made phishing emails easier to detect due to AI patterns<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) It enables attackers to create grammatically perfect, credible phishing emails at scale<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) It has eliminated the need for social engineering in phishing<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) It has made phishing attacks more expensive to execute<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. What approach must defenders adopt against AI-generated phishing content?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Relying solely on traditional keyword-based detection<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) Shifting to intent-centric inference and semantic analysis<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) Focusing only on grammatical errors in emails<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Eliminating all AI systems from security operations<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. How do defense systems counter AI-powered paraphrasing attacks?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) By focusing only on exact text matches<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) Through semantic hashing and embedding similarity that groups messages by meaning<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) By eliminating all language analysis from detection systems<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Through manual review of every email variant<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+    </div>
 </section>

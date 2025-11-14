@@ -1,3 +1,62 @@
 <section>
-    <h1>Lesson44</h1>
+    <h1>Lesson 44</h1>
+    <section>
+    <h1>Corporate Policy and Email Hygiene</h1>
+    
+    <p>Policies and hygiene form the invisible architecture upon which technical security stands. Even the most advanced AI-driven filtering collapses if employees are permitted to bypass the process or if controls are inconsistently applied. Corporate email hygiene establishes behavioral and procedural guardrails that dramatically reduce the probability of successful phishing exploitation.</p>
+    
+    <p>At its foundation lies the authentication discipline. Every enterprise must enforce multi-factor authentication (MFA) for all accounts accessing mail or identity providers. Phishing often targets credentials, and MFA disrupts this chain. Complementing MFA, password uniqueness and rotation policies prevent credential reuse across systems—a common exploitation vector after third-party breaches.</p>
+    
+    <p>Next is transactional verification. Finance and procurement teams must implement verbal or secondary-channel confirmation for payment changes, invoice modifications, or bank details updates. Many business email compromise (BEC) incidents exploit email-only authorization chains. A simple voice confirmation step neutralizes million-dollar fraud attempts.</p>
+    
+    <p>Technical hygiene controls operate in tandem. Email signing and authentication protocols—SPF, DKIM, DMARC—should be enforced with strict alignment. Regular audits verify that corporate domains cannot be spoofed externally. Internal mail routing should block look-alike domains or Unicode homographs that impersonate internal addresses. Attachment policies enforce file-type whitelists, stripping executables or compressed archives.</p>
+    
+    <p>Corporate policy must also codify incident reporting. A single standardized mechanism—an integrated "Report Phishing" button—routes suspicious messages directly to the SOC. Response speed defines containment success; decentralized or informal reporting leads to delay and exposure.</p>
+    
+    <p>Education complements enforcement. Every onboarding process must include cybersecurity orientation, periodic refreshers, and communication from leadership reinforcing vigilance. Policy alone cannot foster compliance—it must be embedded into workflows through automation: banners for external senders, alerts for payment-related keywords, and inline risk scoring that visually cues the user.</p>
+    
+    <p>Email hygiene is therefore not a set of rules but a culture of minimal trust. It balances user autonomy with procedural rigor, ensuring that every employee operates under a consistent, predictable security framework. In mature organizations, adherence to hygiene standards becomes as natural as compliance with physical safety protocols—a silent reflex that prevents chaos from entering through a single email.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. What is the primary role of corporate email hygiene in phishing defense?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) To replace all technical security measures<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) To establish behavioral and procedural guardrails that reduce exploitation probability<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) To eliminate the need for employee training<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) To focus solely on technical authentication protocols<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. How does transactional verification help prevent business email compromise?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) By eliminating all email-based financial transactions<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) Through secondary-channel confirmation that neutralizes email-only authorization chains<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) By relying solely on automated payment systems<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) By eliminating human verification from financial processes<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. What is the ultimate goal of embedding email hygiene into organizational culture?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) To create complex rules that employees must constantly reference<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) To make security adherence a natural reflex similar to physical safety protocols<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) To eliminate all email communication risks entirely<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) To focus security efforts only on technical solutions<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+    </div>
 </section>

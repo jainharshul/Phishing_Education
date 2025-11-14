@@ -1,3 +1,54 @@
 <section>
-    <h1>Lesson32</h1>
+    <h1>Lesson 32</h1>
+    <section>
+    <h1>Analyzing Headers for Authenticity</h1>
+    
+    <p>Header analysis reconstructs the message's provenance graph and exposes inconsistencies that deterministic checks alone may miss. Parsing the Received chain yields hop-level metadata—IP addresses, hostnames, timestamps, and TLS session information—enabling geographic and network-path validation. Header-derived signals include alignment metrics between visible sender domains and authenticated domains (SPF, DKIM alignment), temporal discrepancies in hop timestamps (which can indicate replay or injection), and mismatches between envelope-from and header-from fields that often reveal forwarding abuse or malicious relay use.</p>
+    
+    <p>Authentication artifacts are assessed both for binary validity and for contextual strength. A DKIM signature that validates but uses an old or weak key, or a DMARC policy with a 'none' disposition for sensitive domains, reduces the assurance level. Reputation enrichment adds nuance: historical sending volumes, ASN stability, and DNS change frequency are integrated to compute a probabilistic provenance score. Baseline models establish expected mailflow patterns per legitimate sender—typical sending IP ranges, relay sequences for third-party services, and time-of-day distributions. Deviations from these baselines are scored using probabilistic models (Gaussian process priors, Bayesian anomaly detectors) rather than hard thresholds to reduce false positives.</p>
+    
+    <p>Forensic header analysis also surfaces tactics like lookalike subdomain use, domain fronting, and use of compromised relay infrastructure. Effective systems include automated remediation playbooks—soft-blocking, tagging for secondary inspection, and escalation to SOC—coupled with detailed metadata export to incident platforms. Because headers can be forged in parts, robust detection treats header signals as one axis in a multimodal decision surface; when headers conflict with strong link or NLP signals, the combined posterior probability guides final action, preserving both efficacy and explainability.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. What does header analysis help reconstruct that exposes inconsistencies deterministic checks may miss?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) The message's encryption strength<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) The message's provenance graph<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) The message's content validity<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) The message's attachment security<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. What type of models are used to score deviations from baseline mailflow patterns to reduce false positives?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Deterministic threshold models<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) Linear regression models<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) Probabilistic models<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Rule-based expert systems<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. How should header signals be treated in robust detection systems when they conflict with other strong signals?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Header signals should always be prioritized over other signals<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) Header signals should be completely ignored in case of conflict<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) As one axis in a multimodal decision surface guided by combined probability<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) As the definitive factor for final action decisions<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+    </div>
 </section>

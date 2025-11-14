@@ -1,3 +1,58 @@
 <section>
-    <h1>Lesson41</h1>
+    <h1>Lesson 41</h1>
+    <section>
+    <h1>Evasion Techniques by Attackers</h1>
+    
+    <p>Phishing actors treat detection models as opponents to be studied, not walls to be avoided. They constantly explore ways to exploit the very assumptions upon which filters operate. Understanding their evasion techniques is essential for maintaining model robustness.</p>
+    
+    <p>Linguistic evasion involves subtle manipulation of wording and structure. Attackers replace blacklisted keywords with synonyms or benign corporate language, insert random whitespace or invisible characters, and employ machine translation to produce multilingual variants. Some leverage large language models to generate natural-sounding messages that defeat rule-based pattern recognition.</p>
+    
+    <p>Structural evasion targets technical signals. Emails may originate from compromised legitimate servers, passing SPF/DKIM checks flawlessly. Links redirect through reputable content-delivery networks or URL-shortening services before landing on malicious hosts. Attachments are password-protected archives that neutralize sandbox scanning. Even benign assets—Google Docs, SharePoint, Dropbox—are misused as delivery intermediaries, exploiting the implicit trust such platforms enjoy.</p>
+    
+    <p>More advanced adversaries craft adversarial samples—emails deliberately engineered to mislead machine-learning classifiers by perturbing features that influence model weights. Small lexical or HTML changes can shift probability scores just enough to slip beneath blocking thresholds. To counter this, defenders employ adversarial training, injecting such manipulated samples into retraining datasets, and robust optimization, which enforces stability across perturbations. Continuous penetration testing of filters—so-called "red-teaming the model"—exposes weaknesses before attackers exploit them.</p>
+    
+    <p>Ultimately, no single technique guarantees immunity. Robustness arises from diversity: ensembles of heterogeneous models, layered heuristics, and human oversight. Just as attackers iterate, so must defenders. A mature organization institutionalizes continuous validation, treating every new campaign as free adversarial training data to harden its detection surface.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. What is the primary goal of linguistic evasion techniques used by attackers?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) To improve email readability for victims<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) To defeat rule-based pattern recognition in filters<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) To make emails appear more professional<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) To reduce file size for faster delivery<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. How do attackers use benign assets like Google Docs and Dropbox in their evasion strategies?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) As final storage for stolen data<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) As delivery intermediaries exploiting implicit trust<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) As primary hosting for malicious content<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) As tools for creating phishing emails<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. What defensive approach helps counter adversarial samples crafted by attackers?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Relying solely on static blacklists<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) Adversarial training and robust optimization<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) Eliminating machine learning from detection systems<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Using only human review for all emails<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+    </div>
 </section>

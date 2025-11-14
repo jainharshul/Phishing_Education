@@ -1,3 +1,68 @@
 <section>
-    <h1>Lesson38</h1>
+    <h1>Lesson 38</h1>
+    <section>
+    <h1>Phishing Detection Pipelines</h1>
+    
+    <p>A phishing-detection solution in production resembles an industrial data-processing plant: raw materials enter, transformation stages refine the data, and actionable intelligence exits. Its power lies in automation, modularity, and feedback integration.</p>
+    
+    <p>1. Ingestion and Normalization. Incoming emails arrive through SMTP relays or cloud APIs. Before analysis, the system normalizes encodings, decompresses attachments, and validates MIME boundaries. It isolates metadata (headers, sender IP, TLS handshake data) and payload (text, HTML, embedded media).</p>
+    
+    <p>2. Pre-Processing and Feature Extraction. Dedicated microservices parse each modality:
+– Header analyzers derive alignment, authentication, and routing features.
+– Text processors tokenize and embed linguistic content.
+– HTML parsers construct DOM graphs to expose hidden scripts or forms.
+– URL expanders resolve redirections and retrieve WHOIS and reputation attributes.
+– Attachment analyzers perform hashing, type detection, and optional sandbox execution.
+The extracted features are pushed into a central feature store, ensuring consistency across experiments and production scoring.</p>
+    
+    <p>3. Model Inference. Multiple classifiers operate in sequence or parallel. Fast, interpretable models (logistic regression, gradient boosting) handle high-throughput traffic; heavier deep-learning modules process a smaller subset for enriched context. Ensemble logic combines its probabilities through calibration layers to yield a unified risk score.</p>
+    
+    <p>4. Decision and Action. Risk thresholds trigger policy outcomes—deliver with a banner, hold in quarantine, or block outright. Every decision is logged with contextual evidence to support analyst triage and compliance audits.</p>
+    
+    <p>5. Monitoring and Feedback. Operational telemetry—scoring latency, false-positive ratios, user override counts—feeds dashboards and alerts. Analyst feedback and user reports return to the adaptive-learning subsystem for retraining.</p>
+    
+    <p>At enterprise scale, orchestration frameworks such as Kubernetes or cloud-native queues manage parallelism and resilience. Integration with SOAR and SIEM platforms allows automatic ticketing, correlation with network telemetry, and escalation of confirmed compromises. The result is a closed, autonomous ecosystem where hundreds of thousands of emails per hour can be analyzed with minimal human intervention, sustaining a consistent defensive perimeter around constantly shifting threat vectors.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. What is the primary advantage of a modular phishing-detection pipeline?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) It eliminates the need for any human oversight<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) Automation, modularity, and feedback integration<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) It requires less computational resources<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) It can operate without any training data<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. What happens during the Model Inference stage of the pipeline?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Emails are initially received and normalized<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) Features are extracted from email components<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) Multiple classifiers operate to produce unified risk scores<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Final actions like quarantining or blocking are executed<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. How does integration with SOAR and SIEM platforms enhance the phishing detection pipeline?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) By eliminating the need for model inference<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) By enabling automatic ticketing, correlation with network telemetry, and escalation<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) By reducing the number of processing stages required<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) By making the system independent of feature extraction<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+    </div>
 </section>

@@ -1,3 +1,80 @@
 <section>
     <h1>Lesson14</h1>
+    <section>
+    <h1>Email Authentication Protocols</h1>
+    
+    <p>Email services use special security systems called authentication protocols to verify who sent an email. These systems work like digital ID checks to help stop phishing. The three main protocols are SPF, DKIM, and DMARC, and they each play a different role in checking an email's legitimacy.</p>
+    
+    <p>SPF, or Sender Policy Framework, acts like a bouncer checking a guest list. It looks to see if the server that sent the email is officially allowed to send mail for the domain in the "From" address. If the server isn't on the list, the SPF check fails. DKIM, or DomainKeys Identified Mail, is like a tamper-proof seal on a medication bottle. It uses a digital signature to prove that the email wasn't changed on its way to you. If the seal is broken, the DKIM check fails.</p>
+    
+    <p>DMARC, or Domain-based Message Authentication, Reporting & Conformance, is the manager that makes the final decision. It looks at the results of the SPF and DKIM checks. It then tells the receiving email server what to do with a message that fails—whether to deliver it, send it to junk mail, or reject it completely.</p>
+    
+    <p>You can see the results of these checks yourself by looking at the email's raw source code. Look for a header called "Authentication-Results." In a real email from a trusted company like PayPal, you will see results like "spf=pass" and "dkim=pass." In a phishing email, you will often see "spf=fail" or "dkim=fail," which is a clear sign the email is fake and failed its security checks.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. What is the primary function of the SPF (Sender Policy Framework) protocol?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) To encrypt the content of an email so it cannot be read.<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) To check if the sending server has permission to send mail for the "From" domain.<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) To provide a digital signature that proves the email was not altered.<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) To decide whether to send a failing email to the junk folder.<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. The DKIM (DomainKeys Identified Mail) protocol is best described as:</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) A guest list for email servers.<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) A rule that tells a receiving server how to handle a failed email.<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) A method for tracking the geographic path of an email.<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> d) A cryptographic seal that verifies an email was not changed in transit.<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. What is the role of the DMARC protocol?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> a) It makes a final decision on what to do with an email that fails SPF or DKIM.<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) It signs the email to prove it is authentic.<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) It checks the "Reply-To" address for fraud.<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) It displays the sender's name in your inbox.<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>4. In the raw source of an email, where would you look to find the results of these authentication checks?</h3>
+            <div id="feedback-q4" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) In the "From" header.<br></label>
+                <label><input type="radio" name="q4" value="b" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) In the "Subject" header.<br></label>
+                <label><input type="radio" name="q4" value="c" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) In the "Authentication-Results" header.<br></label>
+                <label><input type="radio" name="q4" value="d" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) In the "Date" header.<br></label>
+            </div>
+            <div id="result-q4" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>5. If you see "spf=fail" and "dkim=fail" in an email's authentication headers, what does this most likely indicate?</h3>
+            <div id="feedback-q5" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q5" value="a" onclick="document.getElementById('feedback-q5').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) The email is definitely legitimate but was sent from a backup server.<br></label>
+                <label><input type="radio" name="q5" value="b" onclick="document.getElementById('feedback-q5').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) The email has passed all security checks and is safe to trust.<br></label>
+                <label><input type="radio" name="q5" value="c" onclick="document.getElementById('feedback-q5').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) The email has failed its digital ID checks and is likely a phishing attempt.<br></label>
+                <label><input type="radio" name="q5" value="d" onclick="document.getElementById('feedback-q5').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Your email client does not support these security protocols.<br></label>
+            </div>
+            <div id="result-q5" class="result"></div>
+        </div>
+    </div>
 </section>

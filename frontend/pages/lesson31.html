@@ -1,3 +1,66 @@
 <section>
     <h1>Lesson31</h1>
+    <section>
+    <h1>Natural Language Processing in Email Filtering</h1>
+    
+    <p>Natural Language Processing (NLP) provides the semantic engine that discerns intent, tone, and manipulation strategies embedded in email text. Rather than static keyword lists, production-grade NLP systems use contextualized embeddings from transformer models (BERT family, RoBERTa variants, or domain-specialized encoders) to capture subtle semantic shifts and paraphrasing attempts. These embeddings feed multiple downstream tasks in a multi-task learning paradigm: binary maliciousness classification, intent categorization (e.g., credential request vs informational update), entity extraction for impersonation detection, and sequence tagging for credential/PII solicitation recognition.</p>
+    
+    <p>Robustness is built through augmentation and adversarial training. Because attackers frequently obfuscate content by rephrasing or injecting benign noise, training datasets include paraphrase augmentation, back-translation, synonym substitution, and synthetic obfuscation. Contrastive learning methods improve the separation between benign semantic neighborhoods and malicious paraphrases. Additionally, token-level explainability (attention analysis, gradient-based saliency) is combined with post-hoc attribution (SHAP) so that analysts can see which phrases or tokens drove a model's high-risk decision.</p>
+    
+    <p>Key practical integrations elevate NLP from prototype to production: entity resolution against verified identity graphs (employee directories, vendor registries), temporal context (a recurring billing reminder vs an out-of-cycle urgent request), and cross-message threading (is this message part of an established conversation?). NLP outputs are therefore never interpreted in isolation; they are probabilistically fused with header, link, and behavioral signals to form an enriched risk profile. Latency-sensitive deployments often use distilled or quantized models at the gateway and reserve full-size encoders for batch analysis and incident correlation, balancing fidelity with operational constraints.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. What is the primary advantage of using transformer models like BERT in email filtering compared to static keyword lists?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) They are simpler to implement<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) They can capture subtle semantic shifts and paraphrasing attempts<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) They require less computational power<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) They only work in English<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. How do NLP systems build robustness against attacker obfuscation techniques?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) By using only simple keyword matching<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) By ignoring all emails with unusual wording<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) Through paraphrase augmentation and adversarial training<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) By requiring human review of all messages<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. What is the purpose of token-level explainability in NLP systems?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) To make the system run faster<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) To show analysts which phrases or tokens drove a high-risk decision<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) To translate emails into different languages<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) To encrypt email content<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>4. How are NLP outputs typically used in production email security systems?</h3>
+            <div id="feedback-q4" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) As the sole determinant for blocking emails<br></label>
+                <label><input type="radio" name="q4" value="b" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) Only for batch analysis after the fact<br></label>
+                <label><input type="radio" name="q4" value="c" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) Fused with header, link, and behavioral signals to form a risk profile<br></label>
+                <label><input type="radio" name="q4" value="d" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) To automatically reply to suspicious emails<br></label>
+            </div>
+            <div id="result-q4" class="result"></div>
+        </div>
+    </div>
 </section>

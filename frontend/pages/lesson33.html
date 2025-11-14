@@ -1,3 +1,54 @@
 <section>
-    <h1>Lesson33</h1>
+    <h1>Lesson 33</h1>
+    <section>
+    <h1>Detection via Link Analysis</h1>
+    
+    <p>URL and link analysis target the conversion vector of phishing: the landing site. The analysis pipeline performs layered expansion and normalization—resolving URL shorteners, following redirect chains, normalizing punycode and percent-encoding, and recording each intermediate domain and HTTP response. Lexical analysis measures domain similarity to legitimate assets (edit distance, token overlap), analyzes token distributions in paths and queries, and assesses entropy and randomness consistent with automated domain generation. DNS and WHOIS telemetry contribute temporal signals: recent registration dates, privacy-protected WHOIS, and rapid registry changes are strong indicators in commodity phishing campaigns.</p>
+    
+    <p>Reputational signals are combined with dynamic behavior checks. TLS certificate analysis inspects issuer, validity window, subject alternative names, and anomalies (self-signed, mismatched CN). Dynamic rendering—headless browser instrumentation—captures page structure, form presence, and script behaviors, revealing credential-capture forms, auto-submitting scripts, or drive-by download attempts. Operationally, systems adopt tiering: known-malicious hosts are blocked via blacklists and threat feeds; high-risk but unknown domains are placed into sandbox-inspection or proxied with user interstitial warnings; low-risk domains are monitored and cataloged.</p>
+    
+    <p>The pragmatic challenge is scale and latency. Real-time mailflow cannot afford full dynamic rendering for every link; triage uses fast lexical and reputation heuristics to triage. Machine models trained on link features output continuous risk scores used to decide which URLs require deeper analysis. The architecture must also handle the adversary pattern of rapid domain churn; threat hunting layers use clustering across temporal windows (shared hosting, identical payloads, overlapping token signatures) to detect low-volume targeted campaigns that evade thresholded defenses. Finally, post-click telemetry—if available through secure browsing proxies—feeds back into models, closing the loop between detection and operational containment.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. What is the primary target of URL and link analysis in phishing detection?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Email header authenticity<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) The landing site<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) Attachment malware<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Sender reputation<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. Why can't real-time mailflow afford full dynamic rendering for every link?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Dynamic rendering is not effective for detection<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) It requires specialized hardware<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) Scale and latency constraints<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Legal restrictions on web scraping<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. What technique helps detect low-volume targeted campaigns that evade thresholded defenses?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Manual review of every email<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) Static blacklisting only<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) Clustering across temporal windows<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Increasing detection thresholds<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+    </div>
 </section>

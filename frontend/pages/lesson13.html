@@ -1,3 +1,68 @@
 <section>
     <h1>Lesson13</h1>
+    <section>
+    <h1>From and Reply To</h1>
+    
+    <p>When you look at an email, you naturally trust the "From" address to tell you who sent it. However, phishers exploit this trust by manipulating another, less obvious field: the "Reply-To" address. Understanding the difference between these two fields is a critical defense against being tricked.</p>
+    
+    <p>The "From" address is what you see in your inbox. It's the name and email address that appears as the sender. A phisher can easily make this look legitimate, such as "support@yourbank.com." This is the illusion they want you to believe. However, this does not always control where your reply goes.</p>
+    
+    <p>The "Reply-To" address is a separate, hidden instruction that tells your email program where to send your response. When you hit "Reply," your email client automatically uses the "Reply-To" address instead of the "From" address. A phisher can set a "From" address that looks real, but set the "Reply-To" address to their own personal, fraudulent email account.</p>
+    
+    <p>This trick is how many Business Email Compromise (BEC) scams work. You might get an email that appears to be from your CEO, with a "From" address that looks correct. The email asks you a question. When you hit "Reply," you assume you are emailing your CEO back. But if the phisher has set a different "Reply-To" address, your response, which may contain confidential information, goes directly to the attacker instead. Always double-check the email address in the "To" field when you hit reply to ensure your response is going to the right person.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. What is the primary difference between the "From" and "Reply-To" email fields?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) The "From" field is for the subject, and the "Reply-To" is for the sender's name.<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) The "From" field is always fake in phishing emails, while the "Reply-To" is always real.<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) They are always the same address in every email.<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> d) The "From" field is what you see as the sender, but the "Reply-To" field controls where your reply is sent.<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. How can a phisher exploit the "Reply-To" field?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> a) By making the "From" address look legitimate but setting the "Reply-To" to send responses to their own fraudulent account.<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) By deleting the "Reply-To" field so that replies bounce back.<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) By using the "Reply-To" field to change the email's subject line.<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) By making the "Reply-To" field invisible so you cannot reply at all.<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. After reading an email and hitting "Reply," what should you always do as a safety precaution?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Assume the "To" field is correct and send the message immediately.<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) Double-check the email address in the "To" field to ensure it is the intended recipient.<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) Call the sender on the phone to let them know you are replying.<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Never use the "Reply" function for work emails.<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>4. An email that appears to be from your manager asks you to send a confidential client list. You hit "Reply" and the "To" field automatically populates with an address you don't recognize. What is the most likely explanation?</h3>
+            <div id="feedback-q4" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Your email client is malfunctioning.<br></label>
+                <label><input type="radio" name="q4" value="b" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) Your manager has changed their email address without telling you.<br></label>
+                <label><input type="radio" name="q4" value="c" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) The phisher set a fraudulent "Reply-To" address while spoofing the "From" address.<br></label>
+                <label><input type="radio" name="q4" value="d" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) The client list is too large to send via email.<br></label>
+            </div>
+            <div id="result-q4" class="result"></div>
+        </div>
+    </div>
 </section>

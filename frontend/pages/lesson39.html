@@ -1,3 +1,56 @@
 <section>
-    <h1>Lesson39</h1>
+    <h1>Lesson 39</h1>
+    <section>
+    <h1>Deep Learning vs Traditional Models</h1>
+    
+    <p>For years, email security relied on shallow classifiers and rule engines—lightweight, transparent, and easy to maintain. Algorithms such as Naïve Bayes or logistic regression were sufficient when phishing content followed predictable templates. They examined explicit tokens, suspicious domains, or heuristic patterns. However, as campaigns became multilingual, visually deceptive, and linguistically sophisticated, these linear methods reached their ceiling.</p>
+    
+    <p>Traditional models remain valued for speed, interpretability, and low resource demands. They are effective first-stage filters: scoring millions of messages per hour and passing only uncertain cases onward. Yet they fundamentally treat features as independent and static, missing higher-order relationships like tone, context, and cross-field dependencies.</p>
+    
+    <p>Deep-learning architecture overcomes these limitations through hierarchical representation. Convolutional networks identify image-level deception—fake logos, pixel-level brand mimicry. Recurrent and transformer models capture sequential and semantic nuance, detecting linguistic manipulation such as fabricated urgency or authority cues. Graph neural networks extend detection across communication networks, modeling relationships among senders, recipients, domains, and temporal sequences. These systems learn abstract patterns that resist simple signature mimicry.</p>
+    
+    <p>The trade-offs are complexity, computing cost, and explainability. Deep models require GPU infrastructure, substantial labeled data, and rigorous monitoring for drift. Interpretability is achieved through attention visualization, SHAP values, or integrated-gradients analysis—tools that translate opaque neuron activations into analyst-readable signals. Best practice pairs both worlds: traditional classifiers act as the frontline sieve, deep models as the contextual brain. Together, they create a tiered architecture where efficiency and sophistication coexist, ensuring that modern spear-phishing, impersonation, and AI-generated content are detected with high confidence and minimal delay.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. What are the primary advantages of traditional models in phishing detection?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Ability to detect complex linguistic patterns<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) Understanding of cross-field dependencies<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) Speed, interpretability, and low resource demands<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Handling of multilingual content effectively<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. How do deep learning models overcome the limitations of traditional methods?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) By being faster and requiring fewer resources<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) Through hierarchical representation learning of complex patterns<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) By treating features as independent and static<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Through simpler rule-based approaches<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. What is considered best practice when combining traditional and deep learning models?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Using only deep learning models for all detection tasks<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) Eliminating traditional models entirely<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) Creating a tiered architecture with traditional classifiers as frontline and deep models for context<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Using traditional models only for complex pattern recognition<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+    </div>
 </section>

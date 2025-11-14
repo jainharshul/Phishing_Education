@@ -1,3 +1,64 @@
 <section>
-    <h1>Lesson49</h1>
+    <h1>Lesson 49</h1>
+    <section>
+    <h1>Incident Management Workflow</h1>
+    
+    <p>Detection is only the first step in defense. Once a phishing attempt is identified—whether automatically or through a user report—the organization must transition from analysis to incident management. This workflow orchestrates containment, eradication, and recovery to minimize impact and prevent recurrence.</p>
+    
+    <p>1. Detection and Validation. When an alert triggers, SOC analysts verify authenticity by examining headers, routing paths, and payload hashes. Automated correlation with threat-intelligence feeds confirms whether indicators (domains, IPs, attachments) appear in known campaigns.</p>
+    
+    <p>2. Containment. The affected email is quarantined across all mailboxes using API recall or server-side deletion. Any recipients who interacted—clicked links, opened attachments—are identified. Endpoint detection tools check for signs of compromise, while identity systems revoke active sessions associated with exposed credentials.</p>
+    
+    <p>3. Eradication. Malicious artifacts are isolated and analyzed in sandboxes to derive indicators of compromise (IOCs). These IOCs are propagated to firewall, proxy, and endpoint control lists to block recurrence. Compromised credentials are reset, and system logs are reviewed for lateral movement.</p>
+    
+    <p>4. Communication. The incident response team notifies relevant stakeholders—IT, management, legal, and affected users. Clear, factual messaging prevents rumor and panic. If customer data is involved, compliance officers assess breach notification requirements under relevant regulations.</p>
+    
+    <p>5. Post-Incident Analysis. Forensics reconstructs the full timeline—delivery vector, user interaction, detection latency, and response time. Lessons learned are documented in a root-cause analysis. Where possible, data from the incident—sanitized of personal details—is recycled into model retraining to prevent similar misses.</p>
+    
+    <p>6. Continuous Improvement. Metrics such as mean time to detect (MTTD), mean time to respond (MTTR), and residual risk are tracked over time. Playbooks are updated, automation scripts refined, and awareness programs adjusted based on observed behavioral patterns.</p>
+    
+    <p>Incident management is both a technical and procedural discipline. It requires synchronization across SOC analysts, system administrators, HR, and leadership. The ultimate goal is not merely recovery but resilience—emerging from each incident smarter, faster, and less vulnerable. In a mature cybersecurity posture, every phishing email that slips through is not a failure, but a catalyst for systemic strengthening.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. What is the primary purpose of the incident management workflow?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) To eliminate the need for phishing detection systems<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) To orchestrate containment, eradication, and recovery after detection<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) To focus solely on technical analysis without stakeholder communication<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) To replace automated systems with manual processes<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. What happens during the eradication phase of incident management?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Only notifying affected users about the incident<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) Isolating malicious artifacts, deriving IOCs, and propagating block lists<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) Focusing solely on identifying affected recipients<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Eliminating all communication about the incident<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. What is the ultimate goal of mature incident management in cybersecurity?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) To eliminate all security incidents permanently<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) To build resilience and use incidents as catalysts for systemic strengthening<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) To focus solely on rapid recovery without learning from incidents<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) To eliminate the need for continuous improvement processes<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+    </div>
 </section>

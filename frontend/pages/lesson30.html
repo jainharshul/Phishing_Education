@@ -1,3 +1,68 @@
 <section>
     <h1>Lesson30</h1>
+    <section>
+    <h1>Feature Extraction in Email Security</h1>
+    
+    <p>Feature extraction converts the heterogeneous components of each email into a structured, machine-consumable representation. The process is intentionally multimodal: headers, transport metadata, textual body, HTML DOM, attachments, URLs, and behavioral telemetry are featurized in parallel, then fused. Header parsing yields features such as SPF/DKIM/DMARC outcomes, originating IP and ASN, reverse DNS heuristics, hop-time deltas across Received lines, and alignment indicators (whether the visible From domain aligns with authenticated domains). Transport-level signals include TLS properties, SMTP banner anomalies, and volume-based reputation metrics derived from historical flows.</p>
+    
+    <p>Text processing is layered and size-aware. Tokenization uses subword tokenizers for transformer ecosystems, complemented by n-gram and lexical features for faster heuristics. Contextual embeddings (fine-tuned BERT-like vectors) represent semantics; additional engineered features capture pragmatic cues: modal verb distributions, request-type flags (credential, payment, link-click), and named-entity matches against corporate registries (executives, vendor names). Textual obfuscation features—Unicode mixed-script rates, zero-width characters, and punctuation anomalies—are calculated alongside entropy and token repetition metrics to flag machine-generated or obfuscated content.</p>
+    
+    <p>HTML and attachment featurization require separate pipelines. HTML is parsed to DOM graphs; features include counts of interactive elements, script inclusion sources (inline vs external), form action endpoints and their domain alignment, meta refresh occurrences, and suspicious CSS that hides visual indicators. Attachments are fingerprinted via MIME signatures, file-hash reputational lookups, static-file heuristics (PE imports, macros), and, where policy allows, sandbox-execution artifacts (API calls, outbound network connections). URL analysis decomposes links into lexical features (length, tokenization), structural features (subdomain depth, punycode usage), and contextual features (time of registration, WHOIS anonymity, and certificate properties).</p>
+    
+    <p>Normalization, provenance, and lineage are crucial. Numeric scaling (z-score/min-max), categorical encodings (target or frequency encodings), and sparse hashing strategies preserve numerical stability and reduce dimensionality. Feature lineage metadata ensures traceability for audits and incident investigations: which parse produced a feature, which enrichment service updated the attribute, and the timestamp/version of the featurization logic. Feature selection uses mutual information, model attribution (SHAP values), and cross-validation to prune redundant signals and maintain interpretability. Ultimately, a disciplined feature engineering pipeline produces a high-fidelity matrix that underpins accurate, explainable, and maintainable phishing classifiers.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. What is the primary goal of feature extraction in email security systems?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) To delete suspicious emails automatically<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) To convert email components into structured, machine-readable data<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) To make emails easier for humans to read<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) To encrypt email content for security<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. Which of the following is NOT mentioned as a component analyzed during feature extraction?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Email headers and transport metadata<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) HTML DOM structure<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) Attachment characteristics<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> d) The sender's personal biography<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. What is the purpose of feature lineage metadata in the extraction process?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) To make features more complex<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) To reduce the number of features needed<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) To ensure traceability for audits and investigations<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) To encrypt the feature data<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>4. How do feature selection methods help improve phishing classifiers?</h3>
+            <div id="feedback-q4" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) By making the system slower but more accurate<br></label>
+                <label><input type="radio" name="q4" value="b" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) By requiring more human intervention<br></label>
+                <label><input type="radio" name="q4" value="c" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) By removing redundant signals and maintaining interpretability<br></label>
+                <label><input type="radio" name="q4" value="d" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) By eliminating the need for model training<br></label>
+            </div>
+            <div id="result-q4" class="result"></div>
+        </div>
+    </div>
 </section>

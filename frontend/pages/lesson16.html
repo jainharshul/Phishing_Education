@@ -1,3 +1,66 @@
 <section>
     <h1>Lesson16</h1>
+    <section>
+    <h1>IP Names in Urls</h1>
+    
+    <p>When you look at a web address, you usually see a name like "google.com." This is a domain name, and it's how most legitimate websites are accessed. A major red flag in a phishing email is a link that uses a string of numbers, known as an IP address, instead of a name.</p>
+    
+    <p>An IP address looks something like http://192.168.1.1/login.html. Legitimate companies almost never use raw IP addresses in links for their public services like email or banking. They use domain names because they are easier for people to remember and trust. Using an IP address is a common trick for attackers because it helps them hide.</p>
+    
+    <p>By using a direct IP address, the attacker does not have to buy a suspicious-looking domain name like "secure-paypa1.com." They can simply host their fake login page on a server and link directly to its numeric address. This makes the link look more technical and can sometimes bypass simple security filters that are only looking for bad domain names. If you see a link in an email that is just a set of numbers, it is a very strong sign that you are looking at a phishing attempt.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. What is a common characteristic of a suspicious URL found in a phishing email?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) It uses a well-known domain name like "microsoft.com".<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) It is a long, descriptive name like "secure-login-bank-of-america.com".<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) It is a string of numbers, known as an IP address, like "http://192.168.1.1".<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) It uses the "https://" protocol at the beginning.<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. Why do legitimate companies typically avoid using raw IP addresses in their website links?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) IP addresses are more expensive to use than domain names.<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) Domain names are easier for people to remember and build trust.<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) IP addresses are blocked by all web browsers.<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) It is illegal for businesses to use IP addresses.<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. How does using a direct IP address benefit a phisher?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> a) It helps them hide their identity and avoid using a suspicious domain name.<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) It makes their website load much faster for the victim.<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) It guarantees their email will bypass all spam filters.<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) It automatically encrypts the information victims enter.<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>4. You receive an email from a delivery service. The link to "track your package" points to http://203.0.113.45/track.php. What should you conclude?</h3>
+            <div id="feedback-q4" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) The delivery service is using a new, efficient tracking system.<br></label>
+                <label><input type="radio" name="q4" value="b" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) The link is safe because it uses numbers, which are harder to fake.<br></label>
+                <label><input type="radio" name="q4" value="c" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) You should click the link to see if your package is there.<br></label>
+                <label><input type="radio" name="q4" value="d" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> d) This is a strong sign of a phishing attempt and you should not click the link.<br></label>
+            </div>
+            <div id="result-q4" class="result"></div>
+        </div>
+    </div>
 </section>

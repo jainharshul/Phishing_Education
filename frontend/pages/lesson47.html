@@ -1,3 +1,60 @@
 <section>
-    <h1>Lesson47</h1>
+    <h1>Lesson 47</h1>
+    <section>
+    <h1>Ethical Use of AI in Cyber Defense</h1>
+    
+    <p>As AI becomes entrenched in cyber defense, it raises pressing ethical questions around privacy, consent, and proportionality. Phishing-detection models train on real email content—some of it personal, confidential, or privileged. Without strict governance, this practice risks violating trust and compliance mandates. Ethical AI in cybersecurity means embedding responsibility into every phase of data handling.</p>
+    
+    <p>The first principle is data minimization. Models require only specific attributes—language structure, domain metadata, or link patterns—not entire message histories. Preprocessing pipelines, therefore, anonymize data at ingestion, stripping identifiers like names, addresses, and message IDs. Tokenization replaces personal strings with randomized placeholders while preserving statistical patterns.</p>
+    
+    <p>Next is secure storage and access control. Training corpora reside in encrypted environments with strict role-based access. Every query or export is logged, and retention policies enforce data expiration. If external vendors participate in model training, contractual data-processing agreements ensure that no sensitive content leaves enterprise control.</p>
+    
+    <p>Human annotators must operate under confidentiality agreements, and labeling interfaces are designed to obscure non-essential content. In some architectures, privacy-preserving computation, such as federated learning or homomorphic encryption, allows training across distributed datasets without exposing raw messages.</p>
+    
+    <p>Ethics also governs model deployment. Automated systems must not overreach—scanning private correspondence unrelated to corporate infrastructure or applying risk profiling to individuals without consent. Ethical oversight boards or internal AI councils establish guidelines balancing protection with privacy.</p>
+    
+    <p>Transparency remains vital: organizations should disclose when and how AI assists in threat detection, ensuring users understand its scope and limitations. Responsible AI does not treat privacy as a constraint but as a design parameter. By codifying ethical standards—anonymization, minimal access, accountable retraining—enterprises ensure that their defenses strengthen trust rather than erode it.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. What is the core ethical challenge when using AI for phishing detection?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Making AI systems fast enough for real-time detection<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) Balancing effective threat detection with privacy and consent concerns<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) Eliminating all false positives from detection systems<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Reducing the computational costs of AI models<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. What is the principle of data minimization in ethical AI?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Collecting as much data as possible for comprehensive training<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) Using only specific attributes needed for detection while anonymizing identifiers<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) Eliminating all data storage to maximize privacy<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Focusing only on technical metadata while ignoring content<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. How do ethical oversight boards contribute to responsible AI deployment?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) By eliminating all AI systems from security operations<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) By establishing guidelines that balance security protection with privacy rights<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) By focusing solely on maximizing detection rates at any cost<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) By reducing transparency about how AI systems operate<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+    </div>
 </section>

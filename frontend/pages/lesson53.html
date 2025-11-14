@@ -1,3 +1,58 @@
 <section>
-    <h1>Lesson53</h1>
+    <h1>Lesson 53</h1>
+    <section>
+    <h1>Attachment Behavior Analysis</h1>
+    
+    <p>Attachments remain the oldest and most persistent phishing vector. Despite decades of user training, a single malicious document can still penetrate enterprise defenses. The new generation of attachment inspection focuses not on static signatures but on dynamic behavioral analysis—observing what a file does rather than what it contains.</p>
+    
+    <p>When an attachment arrives, content-disarm mechanisms strip active elements—macros, scripts, embedded objects—creating a sanitized version for safe viewing. The original is dispatched to a sandbox environment, a virtual machine instrumented to monitor runtime behavior. The sandbox observes process creation, registry edits, network calls, and memory injections. If the file attempts outbound connections, downloads secondary payloads, or spawns hidden processes, it is instantly quarantined.</p>
+    
+    <p>Machine-learning classifiers enrich this process by learning behavioral fingerprints. Sequences of API calls, timing intervals, and entropy shifts are encoded as temporal vectors. Recurrent networks detect subtle deviations from normal office-document behavior, catching polymorphic malware that evades signature detection. Correlation with external intelligence—domain reputation, command-and-control infrastructure—adds contextual validation.</p>
+    
+    <p>User-interface integration is critical. When the system blocks an attachment, clear contextual feedback educates rather than frustrates: "This document attempted to contact an external IP; it has been isolated." Over time, transparency reinforces user trust in automated judgments.</p>
+    
+    <p>Beyond prevention, aggregated behavioral telemetry fuels global threat hunting. Analysts identify families of malicious templates, track infrastructure reuse, and publish fingerprints that benefit the wider ecosystem. Training users never to bypass warnings completes the loop: human caution sustains machine logic. The synergy of sandboxing, ML analytics, and user reinforcement turns attachment behavior from a perennial weakness into a measurable, manageable risk domain.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. What is the key focus of modern attachment inspection systems?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Static signature matching only<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) Dynamic behavioral analysis observing what files do during execution<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) File size and type restrictions only<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Manual review of all attachments<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. How do machine-learning classifiers enhance attachment analysis?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) By eliminating the need for sandbox environments<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) By learning behavioral fingerprints and detecting deviations from normal document behavior<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) By focusing only on file names and extensions<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) By making all security decisions without any human oversight<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. What completes the security loop for attachment behavior analysis?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Eliminating all attachments from email communications<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) Training users never to bypass warnings and reinforcing human caution<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) Relying solely on automated systems without user education<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Focusing only on technical measures while ignoring user behavior<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+    </div>
 </section>

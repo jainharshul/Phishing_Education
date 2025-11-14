@@ -61,7 +61,6 @@ const routes = {
     "/lesson54": "/static/pages/lesson54.html",
     "/lesson55": "/static/pages/lesson55.html",
     "/lesson56": "/static/pages/lesson56.html",
-    "/lesson57": "/static/pages/lesson57.html",
     "/email1": "/static/pages/email/email1.html",
     "/email2": "/static/pages/email/email2.html",
     "/email3": "/static/pages/email/email3.html",
@@ -144,7 +143,7 @@ const routes = {
     "/email80": "/static/pages/email/email80.html",
   };
 
-//MY ADDED STUFF
+//Note new pages my not work if you haven't updated you browser cache
 window.goToRandomEmail = function() {
     const randomEmailNumber = Math.floor(Math.random() * 80) + 1;
     console.log("Navigating to email", randomEmailNumber);

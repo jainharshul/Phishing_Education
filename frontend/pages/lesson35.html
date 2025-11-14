@@ -1,3 +1,54 @@
 <section>
-    <h1>Lesson35</h1>
+    <h1>Lesson 35</h1>
+    <section>
+    <h1>Behavioral Email Analysis</h1>
+    
+    <p>Behavioral analysis elevates detection from pattern matching to contextual risk inference by modeling normative sender and recipient behaviors and highlighting deviations indicative of compromise or social-engineering escalation. Sender models encode historical behavior vectors: average send cadence, typical recipient distributions, message-size histograms, and signature metadata. Deviations—sudden out-of-cycle high-value requests, novel recipient sets, or atypical attachment types—are scored using probabilistic anomaly detectors (e.g., isolation forests, Bayesian change-point models). Recipient-side models capture social graphs and expected interaction modalities; an email that asks a low-frequency collaborator to approve finance changes triggers a higher posterior risk than one between frequent contacts.</p>
+    
+    <p>Campaign-level analytics cluster messages by shared signals—identical payload hashes, overlapping URL sets, similar lexical fingerprints, or hosting commonalities—allowing the system to detect coordinated, low-volume attacks that might not breach per-message thresholds. Correlating these clusters with external indicators (newly registered domains, DNS updates, or threat feed hits) converts weak per-message signals into high-confidence campaign alerts. Behavioral intelligence integrates identity signals (anomalous high-privilege requests), endpoint telemetry (suspicious logins or device anomalies), and orchestration patterns (mass forwarding or sudden autoreplies) to form a cross-layer, high-fidelity risk model.</p>
+    
+    <p>Feedback loops operationalize learning: SOC adjudications and user-reported false positives feed into model retraining, calibrating thresholds, and reducing alert fatigue. Automated response playbooks—temporary hold on message delivery, enforced multi-factor verification for finance approvals, or immediate credential rotation prompts—translate behavioral detections into containment actions. Mature deployments embed behavioral analysis into broader risk engineering: prospective simulations (red team phish drills), periodic baseline recalibration, and executive dashboards that quantify residual risk, detection latency, and response efficacy. The result is a detection fabric that contextualizes content signals, prioritizes human effort, and materially reduces organizational exposure to both opportunistic and highly targeted phishing attacks.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. What is the primary advancement that behavioral analysis provides over traditional detection methods?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Faster pattern matching<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) Contextual risk inference through behavior modeling<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) Simpler rule creation<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Elimination of false positives<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. How do campaign-level analytics improve detection capabilities?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) By analyzing each email in complete isolation<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) By clustering messages with shared signals to detect coordinated attacks<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) By focusing only on high-volume email campaigns<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) By eliminating the need for external threat intelligence<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. What role do feedback loops play in mature behavioral analysis systems?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) They automatically block all suspicious emails without review<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) They replace human analysts with fully automated systems<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) They use SOC adjudications and user reports to retrain models and calibrate thresholds<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) They focus solely on increasing detection speed<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+    </div>
 </section>

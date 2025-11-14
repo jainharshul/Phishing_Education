@@ -1,3 +1,68 @@
 <section>
     <h1>Lesson18</h1>
+    <section>
+    <h1>Most Dangerous File Types</h1>
+    
+    <p>Phishing emails often try to trick you into opening a file that will infect your computer. While many file types are safe, attackers rely on a few specific categories that are designed to run code or hide malicious software. Knowing which file types are most dangerous is a key part of your defense.</p>
+    
+    <p>The most obvious dangerous files are executables. These are programs designed to run directly on your computer. Common examples include .exe, .scr (which can be a screensaver but also an executable), .msi (a Windows installer), and script files like .bat and .cmd. An email from a stranger with one of these file types attached is almost always an attack.</p>
+    
+    <p>A more sneaky category is macro-enabled documents. These are files for programs like Word, Excel, and PowerPoint, but with a dangerous difference. Files ending in .docm, .xlsm, and .pptm can contain embedded code, called "macros," that can be used to install malware. This is different from the safer .docx, .xlsx, and .pptx files, which cannot contain this type of code. Attackers send these files hoping you will enable the macros, which then infects your system.</p>
+    
+    <p>Finally, attackers often hide these dangerous files inside archive files. Formats like .zip, .rar, and .7z are used to compress and bundle multiple files together. An attacker will put a malicious .exe or .docm file inside a .zip file to help it bypass email filters that might block the dangerous file on its own. You should always be very cautious about opening any archive file from an untrusted source.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. Which of the following is a category of dangerous file types that are programs designed to run directly on your computer?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Image files like .jpg and .png<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) Executable files like .exe and .msi<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) Text files like .txt<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Video files like .mp4<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. What is the key difference between a .docx file and a .docm file that makes the .docm file more dangerous?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> a) .docm files can contain embedded code (macros) that can install malware.<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) .docm files are always corrupted and cannot be opened.<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) .docm files are larger in size and can slow down your computer.<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) .docm files are an outdated format that is no longer supported.<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. Why would an attacker put a malicious .exe file inside a .zip archive before emailing it?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) To make the file easier to download.<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) To improve the quality of the malicious software.<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) To ensure the file is compatible with all operating systems.<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> d) To help the dangerous file bypass email security filters.<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>4. You receive an email with an attachment named "Invoice.xlsm" from an unknown sender. What is the safest action?</h3>
+            <div id="feedback-q4" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Open the file to see if the invoice is for you.<br></label>
+                <label><input type="radio" name="q4" value="b" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) Enable the macros if prompted, as they are needed to view the content.<br></label>
+                <label><input type="radio" name="q4" value="c" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) Do not open the file and delete the email, as it is likely malicious.<br></label>
+                <label><input type="radio" name="q4" value="d" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Forward the file to your IT department so they can open it.<br></label>
+            </div>
+            <div id="result-q4" class="result"></div>
+        </div>
+    </div>
 </section>

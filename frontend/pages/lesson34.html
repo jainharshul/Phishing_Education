@@ -1,3 +1,54 @@
 <section>
-    <h1>Lesson34</h1>
+    <h1>Lesson 34</h1>
+    <section>
+    <h1>HTML and Script Indicators</h1>
+    
+    <p>HTML-based phishing increasingly aims to replicate legitimate web login flows inside the email or to craft seamless redirections that reduce user suspicion. Detection begins with robust DOM parsing and structural analysis: counting interactive elements (forms, input fields), enumerating script tags and external script sources, and flagging inline event attributes (onClick, onSubmit). Indicators of deceptive behavior include forms whose action attributes point to domains incongruent with the sender, meta refresh tags that auto-redirect after brief delays, and inline JavaScript constructs that obfuscate network calls or decode embedded payloads at render time.</p>
+    
+    <p>Detecting visual impersonation requires more than DOM heuristics. Systems use a combination of DOM signature matching and visual-similarity analysis: snapshot rendering with OCR to detect brand logos, typographic patterns, and UI mimicry; comparison against canonical asset libraries reveals fraudulent reuse. Attackers use techniques to evade static detection—images of login forms, canvas rendering, or obfuscated CSS to hide indicators—so detection stacks augment static rules with runtime emulation (headless rendering) and behavioral indicators: event handlers that capture keystrokes, scripts that post captured data to remote endpoints, or cross-origin resource patterns inconsistent with legitimate mail flows.</p>
+    
+    <p>Security pipelines also account for legitimate use-cases (email-based surveys, in-mail payment confirmations) by incorporating contextual validations: whitelisting vetted services, signature/brand verification, and checking for expected replies to patterns. When suspicious HTML is detected, mitigation strategies vary by risk tolerance: stripping active content, rewriting or disabling links, delivering with explicit warnings, or quarantining for analyst review. The goal is to balance user experience with safety while providing a transparent, explainable rationale to security teams for each action taken.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. What is the primary goal of HTML-based phishing attacks mentioned in the lesson?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) To encrypt email content<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) To replicate legitimate web login flows inside emails<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) To improve email loading speed<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) To enhance email formatting<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. Why do detection systems augment static rules with runtime emulation and behavioral indicators?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) To make detection faster<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) To reduce system resource usage<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) To counter evasion techniques like images of login forms and obfuscated CSS<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) To simplify the detection process<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. What is the ultimate goal when implementing HTML and script detection mitigation strategies?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) To eliminate all HTML content from emails<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) To prioritize detection speed over accuracy<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) To balance user experience with safety while providing explainable rationale<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) To block all emails with interactive elements<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+    </div>
 </section>

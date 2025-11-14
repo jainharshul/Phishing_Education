@@ -1,3 +1,82 @@
 <section>
     <h1>Lesson8</h1>
+    <section>
+    <h1>Business Email Compromise (BEC)</h1>
+    
+    <p>Business Email Compromise (BEC) is a sophisticated form of phishing that acts like a digital impersonation scam, specifically designed to trick employees into transferring money or revealing sensitive data. Unlike many phishing attacks, BEC scams often do not contain any malicious links or attachments. Instead, the attack relies entirely on deception, building a false sense of trust to manipulate the victim into taking a harmful action themselves.</p>
+    
+    <p>The core of a BEC attack is the impersonation of a trusted figure. Attackers carefully pose as a company executive (like the CEO or CFO), a trusted vendor, or a business partner. They use spoofed email addresses that look almost identical to the real one (e.g., ceo@comp4ny.com instead of ceo@company.com) or they compromise a real executive's email account. This gives their communication an immediate appearance of legitimacy.</p>
+    
+    <p>The goal is almost always financial theft or data theft. A common BEC scenario involves an employee in the finance department receiving an urgent email from their "CEO" instructing them to make a large, confidential wire transfer to a new account for a "time-sensitive acquisition." The email emphasizes secrecy and urgency, pressuring the employee to bypass standard approval processes. In other cases, the attacker, posing as a vendor, will send a fake invoice with updated (and fraudulent) banking details, tricking the company into paying the attacker instead of the real vendor.</p>
+    
+    <p>Because BEC attacks lack the usual red flags like suspicious links, they are exceptionally difficult for traditional email security filters to catch. The success of the scam hinges entirely on social engineering—exploiting an employee's desire to be helpful, their respect for authority, and their fear of delaying an important business transaction. The victim believes they are communicating with a legitimate contact and disclosing information or making a payment they are authorized to make, just to the wrong person.</p>
+    
+    <p>These scams have resulted in billions of dollars in losses globally. Defending against BEC requires a culture of verification. This means establishing strict financial controls, such as requiring dual authorization for payments, and implementing a mandatory out-of-band verification step. For example, any email request for a fund transfer or sensitive data must be confirmed via a phone call to the person using a known, pre-established phone number.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. What is a key characteristic that often distinguishes a Business Email Compromise (BEC) attack from other phishing emails?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) It always contains a malicious link for the victim to click.<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) It relies on installing ransomware on the company network.<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> c) It often lacks malicious links and relies entirely on deception.<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) It is only sent to low-level employees.<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. In a typical BEC scam, who does the attacker most often impersonate?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> a) A trusted figure like a company executive or vendor.<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) A random social media contact.<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) A government tax agency.<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) A competing business.<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. What is the primary goal of most BEC attacks?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) To slow down the company's internet connection.<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) To gain likes on social media posts.<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) To force the company to update its software.<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> d) To trick an employee into authorizing a fraudulent payment or revealing data.<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>4. Why are BEC attacks often successful at bypassing email security filters?</h3>
+            <div id="feedback-q4" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) They use advanced encryption that cannot be scanned.<br></label>
+                <label><input type="radio" name="q4" value="b" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) They do not contain the malicious attachments or links the filters are designed to detect.<br></label>
+                <label><input type="radio" name="q4" value="c" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) They are only sent from inside the company's own network.<br></label>
+                <label><input type="radio" name="q4" value="d" onclick="document.getElementById('feedback-q4').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) They are written in a foreign language.<br></label>
+            </div>
+            <div id="result-q4" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>5. According to the lesson, what is the most critical defense against a BEC attack?</h3>
+            <div id="feedback-q5" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q5" value="a" onclick="document.getElementById('feedback-q5').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> a) A culture of verification, such as confirming payment requests with a phone call.<br></label>
+                <label><input type="radio" name="q5" value="b" onclick="document.getElementById('feedback-q5').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> b) Using the most expensive email provider available.<br></label>
+                <label><input type="radio" name="q5" value="c" onclick="document.getElementById('feedback-q5').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) Disabling all wire transfer capabilities.<br></label>
+                <label><input type="radio" name="q5" value="d" onclick="document.getElementById('feedback-q5').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Telling employees to ignore all emails from executives.<br></label>
+            </div>
+            <div id="result-q5" class="result"></div>
+        </div>
+    </div>
 </section>

@@ -1,3 +1,60 @@
 <section>
-    <h1>Lesson46</h1>
+    <h1>Lesson 46</h1>
+    <section>
+    <h1>Explainable AI for Email Classification</h1>
+    
+    <p>In enterprise security, an opaque AI is a liability. Security analysts must trust, interpret, and defend the system's decisions in front of auditors and executives. Explainable AI (XAI) provides the interpretability layer that bridges mathematical inference with human reasoning.</p>
+    
+    <p>Traditional classifiers offered inherent transparency—decision trees and linear models could list their exact rules. Deep learning changed that paradigm: millions of parameters interact in ways even developers struggle to parse. Explainability reintroduces visibility without sacrificing sophistication.</p>
+    
+    <p>For phishing detection, explainability serves three functions: trust, auditability, and refinement. When an email is flagged as malicious, the system must articulate why: suspicious domain mismatch, high linguistic urgency, anomalous sending time, or embedded forms in the HTML body. This output allows analysts to verify whether the alert is genuine or a false positive. Visualization dashboards display token-level heatmaps—highlighting specific words or phrases that influenced the decision, or structural maps showing which header features contributed most to the probability score.</p>
+    
+    <p>Methods such as LIME (Local Interpretable Model-agnostic Explanations), SHAP (Shapley Additive exPlanations), and integrated gradients compute feature contributions per instance, providing localized reasoning. Global explanations, derived from aggregated data, reveal model biases—if a classifier overweights certain domains or languages, engineers can retrain or rebalance data to correct it.</p>
+    
+    <p>Explainability also accelerates incident triage. When analysts can instantly see the rationale, investigation time drops. This transparency improves collaboration between human and machine: the model flags anomalies, and the analyst validates context. Moreover, explainable logs satisfy compliance requirements, especially for regulated sectors where automated decision-making must be auditable.</p>
+    
+    <p>Explainable AI is thus not just a debugging aid but a structural necessity in modern SOC environments. It turns opaque probability outputs into actionable intelligence, ensuring that automation remains accountable, interpretable, and continuously improvable.</p>
+
+    </section>
+
+    <section>
+    <h2>Test Your Knowledge</h2>
+    
+    <div class="quiz">
+        <div class="question">
+            <h3>1. Why is explainable AI considered essential in enterprise security environments?</h3>
+            <div id="feedback-q1" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) It makes AI systems completely autonomous without human oversight<br></label>
+                <label><input type="radio" name="q1" value="b" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) It provides interpretability that allows analysts to trust and defend AI decisions<br></label>
+                <label><input type="radio" name="q1" value="c" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) It eliminates the need for traditional security measures<br></label>
+                <label><input type="radio" name="q1" value="d" onclick="document.getElementById('feedback-q1').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) It focuses solely on improving detection speed without regard for accuracy<br></label>
+            </div>
+            <div id="result-q1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>2. What are the three primary functions of explainability in phishing detection?</h3>
+            <div id="feedback-q2" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) Speed, automation, and elimination of human analysts<br></label>
+                <label><input type="radio" name="q2" value="b" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) Trust, auditability, and refinement<br></label>
+                <label><input type="radio" name="q2" value="c" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) Cost reduction, simplicity, and elimination of false positives<br></label>
+                <label><input type="radio" name="q2" value="d" onclick="document.getElementById('feedback-q2').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) Encryption, anonymization, and data minimization<br></label>
+            </div>
+            <div id="result-q2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <h3>3. How do methods like LIME and SHAP contribute to explainable AI?</h3>
+            <div id="feedback-q3" style="height: 20px; margin-bottom: 10px;"></div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> a) By making AI systems completely opaque and uninterpretable<br></label>
+                <label><input type="radio" name="q3" value="b" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:green;font-weight:bold>Correct</span>'"> b) By computing feature contributions per instance to provide localized reasoning<br></label>
+                <label><input type="radio" name="q3" value="c" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> c) By eliminating the need for any human validation of AI decisions<br></label>
+                <label><input type="radio" name="q3" value="d" onclick="document.getElementById('feedback-q3').innerHTML = '<span style=color:red;font-weight:bold>Incorrect</span>'"> d) By focusing only on global model behavior without instance-level explanations<br></label>
+            </div>
+            <div id="result-q3" class="result"></div>
+        </div>
+    </div>
 </section>
