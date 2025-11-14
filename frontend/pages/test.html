@@ -1,1 +1,1212 @@
-<h2>test</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Awareness Test</title>
+    <style>
+        /*tbd*/
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Phishing Awareness Test</h1>
+        <p class="description">Answer all questions and click Submit to see your results.</p>
+        
+        <form id="testForm">
+            <div class="question">
+                <div class="question-number">1. Which of the following best explains why phishing persists despite widespread awareness campaigns?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q1a" name="q1" value="a">
+                        <label for="q1a">a) Attackers continuously adapt psychological and technical tactics faster than defenses evolve</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q1b" name="q1" value="b">
+                        <label for="q1b">b) Users forget their passwords frequently</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q1c" name="q1" value="c">
+                        <label for="q1c">c) Antivirus software is inherently flawed</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q1d" name="q1" value="d">
+                        <label for="q1d">d) Spam filters intentionally allow a few emails through</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">2. In email header analysis, the originating IP address is typically found in which part of the header chain?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q2a" name="q2" value="a">
+                        <label for="q2a">a) Top "Received" field</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q2b" name="q2" value="b">
+                        <label for="q2b">b) Bottom-most "Received" field</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q2c" name="q2" value="c">
+                        <label for="q2c">c) "Return-Path" header</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q2d" name="q2" value="d">
+                        <label for="q2d">d) "Reply-To" field</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">3. SPF, DKIM, and DMARC together guarantee that an email is legitimate and safe to click.</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q3true" name="q3" value="true">
+                        <label for="q3true">True</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q3false" name="q3" value="false">
+                        <label for="q3false">False</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">4. Select all methods attackers use to bypass NLP-based phishing filters:</div>
+                <div class="options">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q4a" name="q4" value="1">
+                        <label for="q4a">Linguistic paraphrasing via LLMs</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q4b" name="q4" value="2">
+                        <label for="q4b">Unicode homoglyph substitution</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q4c" name="q4" value="3">
+                        <label for="q4c">Reusing identical templates without modification</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q4d" name="q4" value="4">
+                        <label for="q4d">Obfuscating text inside embedded images</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">5. Which factor primarily distinguishes spear-phishing from bulk phishing?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q5a" name="q5" value="a">
+                        <label for="q5a">a) The use of social-media intelligence to personalize messages</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q5b" name="q5" value="b">
+                        <label for="q5b">b) The volume of recipients</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q5c" name="q5" value="c">
+                        <label for="q5c">c) The grammar quality of the email</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q5d" name="q5" value="d">
+                        <label for="q5d">d) The file type used for attachments</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">6. Which components are normally included in a multimodal feature extraction pipeline for email security?</div>
+                <div class="options">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q6a" name="q6" value="1">
+                        <label for="q6a">Header metadata</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q6b" name="q6" value="2">
+                        <label for="q6b">HTML DOM structure</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q6c" name="q6" value="3">
+                        <label for="q6c">Sender's emotional tone embeddings</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q6d" name="q6" value="4">
+                        <label for="q6d">GPU thermal sensors</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">7. A message can pass SPF and DKIM checks yet still be malicious.</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q7true" name="q7" value="true">
+                        <label for="q7true">True</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q7false" name="q7" value="false">
+                        <label for="q7false">False</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">8. Match the protocol/term with its primary function:</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q8a" name="q8" value="a">
+                        <label for="q8a">a) SPF - Authorizes sending servers; DKIM - Cryptographically signs headers; DMARC - Defines receiver policy if checks fail</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q8b" name="q8" value="b">
+                        <label for="q8b">b) SPF - Cryptographically signs headers; DKIM - Defines receiver policy if checks fail; DMARC - Authorizes sending servers</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q8c" name="q8" value="c">
+                        <label for="q8c">c) SPF - Defines receiver policy if checks fail; DKIM - Authorizes sending servers; DMARC - Cryptographically signs headers</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">9. Which ML architecture is most suitable for modeling relationships among senders, recipients, and domains in phishing detection?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q9a" name="q9" value="a">
+                        <label for="q9a">a) Convolutional Neural Network (CNN)</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q9b" name="q9" value="b">
+                        <label for="q9b">b) Graph Neural Network (GNN)</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q9c" name="q9" value="c">
+                        <label for="q9c">c) Logistic Regression</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q9d" name="q9" value="d">
+                        <label for="q9d">d) Naïve Bayes</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">10. The phrase "Immediate action required on your invoice!" primarily exploits which cognitive trigger?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q10a" name="q10" value="a">
+                        <label for="q10a">a) Curiosity</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q10b" name="q10" value="b">
+                        <label for="q10b">b) Authority</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q10c" name="q10" value="c">
+                        <label for="q10c">c) Urgency</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q10d" name="q10" value="d">
+                        <label for="q10d">d) Greed</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">11. Which of the following is the most reliable early indicator of a compromised executive account in whaling scenarios?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q11a" name="q11" value="a">
+                        <label for="q11a">a) Large font size in the email body</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q11b" name="q11" value="b">
+                        <label for="q11b">b) Sudden deviation from typical send cadence or recipients</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q11c" name="q11" value="c">
+                        <label for="q11c">c) Presence of emoji in the signature block</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q11d" name="q11" value="d">
+                        <label for="q11d">d) Messages sent during regular business hours</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">12. In a phishing-detection pipeline, "Decision and Action" layers typically perform which tasks?</div>
+                <div class="options">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q12a" name="q12" value="1">
+                        <label for="q12a">Assign risk scores</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q12b" name="q12" value="2">
+                        <label for="q12b">Quarantine or deliver-with-warning</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q12c" name="q12" value="3">
+                        <label for="q12c">Retrain base models instantly</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q12d" name="q12" value="4">
+                        <label for="q12d">Log contextual evidence for audits</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">13. Differential privacy and federated learning can allow multiple organizations to train phishing-detection models without exposing raw email content.</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q13true" name="q13" value="true">
+                        <label for="q13true">True</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q13false" name="q13" value="false">
+                        <label for="q13false">False</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">14. Behavioral models flag risk when:</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q14a" name="q14" value="a">
+                        <label for="q14a">a) A high-privilege user sends requests outside normal time windows</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q14b" name="q14" value="b">
+                        <label for="q14b">b) A regular newsletter is received on schedule</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q14c" name="q14" value="c">
+                        <label for="q14c">c) Multiple employees receive identical training reminders</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q14d" name="q14" value="d">
+                        <label for="q14d">d) A system update notification is broadcast company-wide</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">15. In AI-driven hyper-personalized phishing, the most effective defense strategy is:</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q15a" name="q15" value="a">
+                        <label for="q15a">a) Increasing spam-filter aggressiveness</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q15b" name="q15" value="b">
+                        <label for="q15b">b) Verifying requests via a trusted secondary channel</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q15c" name="q15" value="c">
+                        <label for="q15c">c) Relying on grammar-check software</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q15d" name="q15" value="d">
+                        <label for="q15d">d) Disabling all external communication</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">16. Indicators that a URL is risky include:</div>
+                <div class="options">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q16a" name="q16" value="1">
+                        <label for="q16a">Recent domain registration</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q16b" name="q16" value="2">
+                        <label for="q16b">IP-numeric hostname (e.g., 192.168.x.x)</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q16c" name="q16" value="3">
+                        <label for="q16c">HTTPS certificate issued by a known CA</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q16d" name="q16" value="4">
+                        <label for="q16d">Excessive subdomain depth</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">17. Explainable-AI methods like SHAP or LIME are used to justify why a specific email was flagged as phishing.</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q17true" name="q17" value="true">
+                        <label for="q17true">True</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q17false" name="q17" value="false">
+                        <label for="q17false">False</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">18. Which of the following is a major limitation of traditional phishing-detection models like Naïve Bayes or logistic regression?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q18a" name="q18" value="a">
+                        <label for="q18a">a) They cannot handle numeric data</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q18b" name="q18" value="b">
+                        <label for="q18b">b) They treat features as independent and miss higher-order relationships</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q18c" name="q18" value="c">
+                        <label for="q18c">c) They require too much computational power</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q18d" name="q18" value="d">
+                        <label for="q18d">d) They cannot process email headers</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">19. In a phishing-detection pipeline, which phase ensures emails are decompressed, encoded uniformly, and MIME boundaries validated before analysis?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q19a" name="q19" value="a">
+                        <label for="q19a">a) Feature extraction</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q19b" name="q19" value="b">
+                        <label for="q19b">b) Ingestion and normalization</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q19c" name="q19" value="c">
+                        <label for="q19c">c) Decision and action</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q19d" name="q19" value="d">
+                        <label for="q19d">d) Model inference</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">20. Precision measures how many alerts generated by the model are genuinely malicious.</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q20true" name="q20" value="true">
+                        <label for="q20true">True</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q20false" name="q20" value="false">
+                        <label for="q20false">False</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">21. Select the typical security metrics monitored in continuous phishing-model evaluation:</div>
+                <div class="options">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q21a" name="q21" value="1">
+                        <label for="q21a">Mean Time to Detect (MTTD)</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q21b" name="q21" value="2">
+                        <label for="q21b">Mean Time to Respond (MTTR)</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q21c" name="q21" value="3">
+                        <label for="q21c">Confusion Matrix Distribution</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q21d" name="q21" value="4">
+                        <label for="q21d">Model Fairness Index</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">22. Which of the following methods best detects a phishing campaign using cloned website templates?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q22a" name="q22" value="a">
+                        <label for="q22a">a) Visual-similarity and DOM-signature analysis</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q22b" name="q22" value="b">
+                        <label for="q22b">b) Link length detection</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q22c" name="q22" value="c">
+                        <label for="q22c">c) Grammar checking</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q22d" name="q22" value="d">
+                        <label for="q22d">d) IP header parsing</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">23. Which mechanism in deep-learning pipelines helps explain why a phishing email was flagged by the model?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q23a" name="q23" value="a">
+                        <label for="q23a">a) Adversarial training</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q23b" name="q23" value="b">
+                        <label for="q23b">b) SHAP or LIME feature attribution</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q23c" name="q23" value="c">
+                        <label for="q23c">c) Dropout layers</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q23d" name="q23" value="d">
+                        <label for="q23d">d) Activation functions</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">24. Adversarial augmentation involves injecting deliberately manipulated phishing samples into retraining datasets to strengthen model robustness.</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q24true" name="q24" value="true">
+                        <label for="q24true">True</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q24false" name="q24" value="false">
+                        <label for="q24false">False</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">25. Which of the following practices ensure high-quality labeling of phishing datasets?</div>
+                <div class="options">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q25a" name="q25" value="1">
+                        <label for="q25a">Inter-annotator agreement measurement</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q25b" name="q25" value="2">
+                        <label for="q25b">Consistent labeling guides</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q25c" name="q25" value="3">
+                        <label for="q25c">Random label flipping for diversity</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q25d" name="q25" value="4">
+                        <label for="q25d">Multi-layer human review</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">26. Why do attackers prefer Business Email Compromise (BEC) scams over traditional phishing?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q26a" name="q26" value="a">
+                        <label for="q26a">a) BEC attacks rely on technical vulnerabilities</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q26b" name="q26" value="b">
+                        <label for="q26b">b) BEC uses trust and impersonation instead of links or malware</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q26c" name="q26" value="c">
+                        <label for="q26c">c) BEC guarantees 100% success rate</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q26d" name="q26" value="d">
+                        <label for="q26d">d) BEC only targets low-level employees</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">27. An email that requests confidential data from a department outside its usual communication network is flagged by behavioral models for which reason?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q27a" name="q27" value="a">
+                        <label for="q27a">a) Large attachment size</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q27b" name="q27" value="b">
+                        <label for="q27b">b) Cross-departmental anomaly in communication graph</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q27c" name="q27" value="c">
+                        <label for="q27c">c) Incorrect sender domain syntax</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q27d" name="q27" value="d">
+                        <label for="q27d">d) Missing DKIM signature</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">28. Which of the following measures align with ethical AI principles in phishing defense?</div>
+                <div class="options">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q28a" name="q28" value="1">
+                        <label for="q28a">Data anonymization and tokenization</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q28b" name="q28" value="2">
+                        <label for="q28b">Secure, role-based data access</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q28c" name="q28" value="3">
+                        <label for="q28c">Unlimited raw email retention</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q28d" name="q28" value="4">
+                        <label for="q28d">Federated training to preserve privacy</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">29. Explainability and interpretability are optional components when deploying AI-based phishing detectors in regulated industries.</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q29true" name="q29" value="true">
+                        <label for="q29true">True</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q29false" name="q29" value="false">
+                        <label for="q29false">False</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">30. Which modern model type captures semantic similarity between paraphrased phishing messages with different wording?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q30a" name="q30" value="a">
+                        <label for="q30a">a) Bag-of-Words</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q30b" name="q30" value="b">
+                        <label for="q30b">b) Contextual transformer embeddings</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q30c" name="q30" value="c">
+                        <label for="q30c">c) Logistic regression classifier</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q30d" name="q30" value="d">
+                        <label for="q30d">d) Simple regex matcher</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">31. Which features are typically analyzed during image-based phishing detection?</div>
+                <div class="options">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q31a" name="q31" value="1">
+                        <label for="q31a">Logo recognition</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q31b" name="q31" value="2">
+                        <label for="q31b">OCR text extraction</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q31c" name="q31" value="3">
+                        <label for="q31c">Compression ratio anomalies</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q31d" name="q31" value="4">
+                        <label for="q31d">Database transaction logs</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">32. What is the primary goal of differential privacy in collaborative phishing-model training?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q32a" name="q32" value="a">
+                        <label for="q32a">a) To encrypt emails in transit</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q32b" name="q32" value="b">
+                        <label for="q32b">b) To ensure model updates cannot reveal individual data samples</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q32c" name="q32" value="c">
+                        <label for="q32c">c) To randomize all email content</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q32d" name="q32" value="d">
+                        <label for="q32d">d) To anonymize network IPs</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">33. During incident response, which step follows immediately after detection and validation?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q33a" name="q33" value="a">
+                        <label for="q33a">a) Eradication</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q33b" name="q33" value="b">
+                        <label for="q33b">b) Containment</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q33c" name="q33" value="c">
+                        <label for="q33c">c) Communication</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q33d" name="q33" value="d">
+                        <label for="q33d">d) Root-cause analysis</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">34. Federated learning allows multiple organizations to contribute to a shared phishing-defense model without sharing any raw message data.</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q34true" name="q34" value="true">
+                        <label for="q34true">True</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q34false" name="q34" value="false">
+                        <label for="q34false">False</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">35. Which layer in a phishing-detection system is responsible for merging outputs from multiple models into one unified risk score?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q35a" name="q35" value="a">
+                        <label for="q35a">a) Preprocessing layer</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q35b" name="q35" value="b">
+                        <label for="q35b">b) Calibration or fusion layer</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q35c" name="q35" value="c">
+                        <label for="q35c">c) Normalization layer</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q35d" name="q35" value="d">
+                        <label for="q35d">d) Adaptive threshold layer</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">36. What is the key advantage of using ensemble models in phishing detection?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q36a" name="q36" value="a">
+                        <label for="q36a">a) They reduce computational requirements</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q36b" name="q36" value="b">
+                        <label for="q36b">b) They combine strengths of multiple classifiers to improve robustness</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q36c" name="q36" value="c">
+                        <label for="q36c">c) They eliminate the need for feature extraction</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q36d" name="q36" value="d">
+                        <label for="q36d">d) They automatically balance datasets</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">37. Deep learning architectures can analyze visual, textual, and behavioral signals in a single multimodal model for phishing detection.</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q37true" name="q37" value="true">
+                        <label for="q37true">True</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q37false" name="q37" value="false">
+                        <label for="q37false">False</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">38. Which of the following features are extracted from email headers for feature engineering?</div>
+                <div class="options">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q38a" name="q38" value="1">
+                        <label for="q38a">DKIM validation result</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q38b" name="q38" value="2">
+                        <label for="q38b">Domain age of sender</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q38c" name="q38" value="3">
+                        <label for="q38c">Frequency of capital letters in the message body</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q38d" name="q38" value="4">
+                        <label for="q38d">Received-path latency between hops</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">39. Which approach can best handle new, unseen phishing patterns that were not present in training data?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q39a" name="q39" value="a">
+                        <label for="q39a">a) Static thresholding</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q39b" name="q39" value="b">
+                        <label for="q39b">b) Semi-supervised or continual learning</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q39c" name="q39" value="c">
+                        <label for="q39c">c) Manual signature updates</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q39d" name="q39" value="d">
+                        <label for="q39d">d) Rule-based keyword filters</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">40. In model evaluation, why is temporal validation critical for phishing detection systems?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q40a" name="q40" value="a">
+                        <label for="q40a">a) To assess system latency</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q40b" name="q40" value="b">
+                        <label for="q40b">b) To measure model drift over evolving attacker strategies</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q40c" name="q40" value="c">
+                        <label for="q40c">c) To calculate average spam volume</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q40d" name="q40" value="d">
+                        <label for="q40d">d) To test domain reputation accuracy</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">41. A "whois lookup" can be used to determine the geographic location and registration age of a phishing domain.</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q41true" name="q41" value="true">
+                        <label for="q41true">True</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q41false" name="q41" value="false">
+                        <label for="q41false">False</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">42. Which benefits are achieved when integrating phishing detection directly into cloud email systems like Microsoft 365 or Google Workspace?</div>
+                <div class="options">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q42a" name="q42" value="1">
+                        <label for="q42a">Centralized global visibility</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q42b" name="q42" value="2">
+                        <label for="q42b">Automated scalability and updates</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q42c" name="q42" value="3">
+                        <label for="q42c">Reduced need for user awareness training</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q42d" name="q42" value="4">
+                        <label for="q42d">Unified threat intelligence correlation</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">43. Which of the following algorithms is most appropriate for unsupervised phishing anomaly detection?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q43a" name="q43" value="a">
+                        <label for="q43a">a) Isolation Forest</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q43b" name="q43" value="b">
+                        <label for="q43b">b) Naïve Bayes</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q43c" name="q43" value="c">
+                        <label for="q43c">c) Logistic Regression</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q43d" name="q43" value="d">
+                        <label for="q43d">d) Decision Tree</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">44. Why is explainability crucial in phishing AI models used in regulated sectors?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q44a" name="q44" value="a">
+                        <label for="q44a">a) It reduces training costs</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q44b" name="q44" value="b">
+                        <label for="q44b">b) It provides traceable reasoning for each prediction to satisfy compliance</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q44c" name="q44" value="c">
+                        <label for="q44c">c) It speeds up inference time</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q44d" name="q44" value="d">
+                        <label for="q44d">d) It allows fully autonomous model retraining</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">45. Which behaviors indicate high susceptibility to phishing according to behavioral telemetry?</div>
+                <div class="options">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q45a" name="q45" value="1">
+                        <label for="q45a">Clicking links without verification</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q45b" name="q45" value="2">
+                        <label for="q45b">Ignoring "external sender" banners</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q45c" name="q45" value="3">
+                        <label for="q45c">Reporting suspicious messages promptly</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q45d" name="q45" value="4">
+                        <label for="q45d">Reusing identical passwords across systems</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">46. Phishing models trained only on English datasets perform equally well for other languages such as Arabic or Japanese.</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q46true" name="q46" value="true">
+                        <label for="q46true">True</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q46false" name="q46" value="false">
+                        <label for="q46false">False</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">47. OCR in image-based phishing detection primarily serves to:</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q47a" name="q47" value="a">
+                        <label for="q47a">a) Improve color accuracy of images</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q47b" name="q47" value="b">
+                        <label for="q47b">b) Convert visual text to machine-readable form for semantic analysis</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q47c" name="q47" value="c">
+                        <label for="q47c">c) Remove metadata from attachments</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q47d" name="q47" value="d">
+                        <label for="q47d">d) Compress large email images</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">48. Which data field would most strongly indicate email spoofing even when SPF and DKIM pass?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q48a" name="q48" value="a">
+                        <label for="q48a">a) Mismatch between "From" and "Reply-To"</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q48b" name="q48" value="b">
+                        <label for="q48b">b) Subject line repetition</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q48c" name="q48" value="c">
+                        <label for="q48c">c) Long attachment filename</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q48d" name="q48" value="d">
+                        <label for="q48d">d) Timestamp mismatch</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">49. An adaptive phishing-detection architecture includes:</div>
+                <div class="options">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q49a" name="q49" value="1">
+                        <label for="q49a">Continuous model retraining pipelines</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q49b" name="q49" value="2">
+                        <label for="q49b">Canary deployments for safe rollouts</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q49c" name="q49" value="3">
+                        <label for="q49c">Manual configuration only</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q49d" name="q49" value="4">
+                        <label for="q49d">Feedback ingestion from user reports</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">50. Generative AI can be used both to simulate phishing attacks for red-team training and to create malicious content by attackers.</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q50true" name="q50" value="true">
+                        <label for="q50true">True</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q50false" name="q50" value="false">
+                        <label for="q50false">False</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">51. Which metric is preferred over accuracy when the dataset has very low phishing-to-legitimate ratio?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q51a" name="q51" value="a">
+                        <label for="q51a">a) Recall</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q51b" name="q51" value="b">
+                        <label for="q51b">b) Precision</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q51c" name="q51" value="c">
+                        <label for="q51c">c) F1-score or Area under Precision-Recall curve</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q51d" name="q51" value="d">
+                        <label for="q51d">d) Confusion matrix count</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">52. In a phishing incident workflow, which phase involves documenting lessons learned and updating preventive controls?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q52a" name="q52" value="a">
+                        <label for="q52a">a) Eradication</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q52b" name="q52" value="b">
+                        <label for="q52b">b) Communication</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q52c" name="q52" value="c">
+                        <label for="q52c">c) Post-incident analysis</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q52d" name="q52" value="d">
+                        <label for="q52d">d) Containment</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">53. What is the primary reason that macro-enabled files (.docm, .xlsm) are dangerous in phishing attacks?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q53a" name="q53" value="a">
+                        <label for="q53a">a) They contain compressed data</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q53b" name="q53" value="b">
+                        <label for="q53b">b) They allow execution of embedded code</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q53c" name="q53" value="c">
+                        <label for="q53c">c) They cannot be opened without internet</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q53d" name="q53" value="d">
+                        <label for="q53d">d) They are always password protected</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">54. Which textual attributes are useful for NLP-driven phishing detection?</div>
+                <div class="options">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q54a" name="q54" value="1">
+                        <label for="q54a">Frequency of modal verbs</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q54b" name="q54" value="2">
+                        <label for="q54b">Named entities matched to company registries</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q54c" name="q54" value="3">
+                        <label for="q54c">File hash entropy</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q54d" name="q54" value="4">
+                        <label for="q54d">Sentiment polarity</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">55. Explainable AI methods such as LIME can help identify specific tokens that increased a phishing probability score.</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q55true" name="q55" value="true">
+                        <label for="q55true">True</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q55false" name="q55" value="false">
+                        <label for="q55false">False</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">56. Which of the following best describes the concept of "concept drift" in phishing-model performance?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q56a" name="q56" value="a">
+                        <label for="q56a">a) A sudden drop in email delivery rates</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q56b" name="q56" value="b">
+                        <label for="q56b">b) The gradual change in phishing patterns that degrades model accuracy</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q56c" name="q56" value="c">
+                        <label for="q56c">c) Variance between validation and training loss</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q56d" name="q56" value="d">
+                        <label for="q56d">d) The change of spam folder thresholds</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">57. Strong corporate email hygiene should include:</div>
+                <div class="options">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q57a" name="q57" value="1">
+                        <label for="q57a">Multi-factor authentication enforcement</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q57b" name="q57" value="2">
+                        <label for="q57b">Out-of-band verification for payments</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q57c" name="q57" value="3">
+                        <label for="q57c">Unrestricted forwarding of external emails</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="q57d" name="q57" value="4">
+                        <label for="q57d">Blocking executable attachments</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">58. Whaling attacks are typically carried out by low-level cybercriminals using basic phishing kits.</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q58true" name="q58" value="true">
+                        <label for="q58true">True</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q58false" name="q58" value="false">
+                        <label for="q58false">False</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-number">59. Which advanced model type captures sequential token dependencies to detect linguistic manipulation in phishing emails?</div>
+                <div class="options">
+                    <div class="radio-group">
+                        <input type="radio" id="q59a" name="q59" value="a">
+                        <label for="q59a">a) Decision tree</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q59b" name="q59" value="b">
+                        <label for="q59b">b) Recurrent neural network (RNN)</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q59c" name="q59" value="c">
+                        <label for="q59c">c) Naïve Bayes classifier</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="q59d" name="q59" value="d">
+                        <label for="q59d">d) Random forest</label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="submit-btn" onclick="gradeTest()">Submit Answers</button>
+        </form>
+
+        <div id="results" class="results">
+            <div class="score">Your Score: <span id="scoreValue">0</span>/59</div>
+            <div class="progress-bar">
+                <div class="progress" id="progressBar"></div>
+            </div>
+            <div id="questionResults"></div>
+        </div>
+    </div>
+
+</body>
+</html>

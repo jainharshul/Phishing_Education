@@ -150,6 +150,110 @@ window.goToRandomEmail = function() {
     window.location.hash = `#/email${randomEmailNumber}`;
     return false;
 };
+
+//function for test.html to grade everything, it is super long and kind of sucks but it works
+window.gradeTest = function() {
+    const correctAnswers = {
+        q1: "a",
+        q2: "b",
+        q3: "false",
+        q4: ["1", "2", "4"],
+        q5: "a",
+        q6: ["1", "2", "3"],
+        q7: "true",
+        q8: "a",
+        q9: "b",
+        q10: "c",
+        q11: "b",
+        q12: ["1", "2", "4"],
+        q13: "true",
+        q14: "a",
+        q15: "b",
+        q16: ["1", "2", "4"],
+        q17: "true",
+        q18: "b",
+        q19: "b",
+        q20: "true",
+        q21: ["1", "2", "3"],
+        q22: "a",
+        q23: "b",
+        q24: "true",
+        q25: ["1", "2", "4"],
+        q26: "b",
+        q27: "b",
+        q28: ["1", "2", "4"],
+        q29: "false",
+        q30: "b",
+        q31: ["1", "2", "3"],
+        q32: "b",
+        q33: "b",
+        q34: "true",
+        q35: "b",
+        q36: "b",
+        q37: "true",
+        q38: ["1", "2", "4"],
+        q39: "b",
+        q40: "b",
+        q41: "true",
+        q42: ["1", "2", "4"],
+        q43: "a",
+        q44: "b",
+        q45: ["1", "2", "4"],
+        q46: "false",
+        q47: "b",
+        q48: "a",
+        q49: ["1", "2", "4"],
+        q50: "true",
+        q51: "c",
+        q52: "c",
+        q53: "b",
+        q54: ["1", "2", "4"],
+        q55: "true",
+        q56: "b",
+        q57: ["1", "2", "4"],
+        q58: "false",
+        q59: "b"
+    };
+
+    let score = 0;
+    let resultsHTML = "";
+
+    for (let i = 1; i <= 59; i++) {
+        const questionId = `q${i}`;
+        let userAnswer = "";
+        let isCorrect = false;
+
+        if ([4, 6, 12, 16, 21, 25, 28, 31, 38, 42, 45, 49, 54, 57].includes(i)) {
+            const checkboxes = document.querySelectorAll(`input[name="${questionId}"]:checked`);
+            userAnswer = Array.from(checkboxes).map(cb => cb.value).sort().join(",");
+            isCorrect = userAnswer === correctAnswers[questionId].sort().join(",");
+        } else {
+            const radios = document.querySelectorAll(`input[name="${questionId}"]:checked`);
+            userAnswer = radios.length > 0 ? radios[0].value : "";
+            isCorrect = userAnswer === correctAnswers[questionId];
+        }
+
+        if (isCorrect) {
+            score++;
+            resultsHTML += `<div class="question-result correct"><strong>Question ${i}:</strong> Correct</div>`;
+        } else {
+            resultsHTML += `<div class="question-result incorrect"><strong>Question ${i}:</strong> Incorrect. Correct answer: ${correctAnswers[questionId]}</div>`;
+        }
+    }
+
+    document.getElementById("scoreValue").textContent = score;
+    document.getElementById("questionResults").innerHTML = resultsHTML;
+    document.getElementById("results").style.display = "block";
+    
+    const percentage = (score / 59) * 100;
+    document.getElementById("progressBar").style.width = `${percentage}%`;
+    
+    document.getElementById("results").scrollIntoView({ behavior: 'smooth' });
+};
+
+
+
+
   
   
   async function fetchPage(url) {
@@ -179,3 +283,4 @@ window.goToRandomEmail = function() {
     window.addEventListener("hashchange", navigate);
     navigate(); // initial load
   }
+
