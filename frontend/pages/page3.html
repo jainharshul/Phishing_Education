@@ -1,8 +1,61 @@
-<section>
-    <h1>page 3</h1>
-    <p>Welcome to Page 3.</p>
-    <div style="margin-top:1rem; display:flex; flex-direction:column; gap:.5rem;">
-        <a class="btn" href="#/test" style="width:100%; padding:.5rem; text-align:center;">Take the practice test</a>
-        <a class="btn" href="#" onclick="goToRandomEmail(); return false;" style="width:100%; padding:.5rem; text-align:center;">Go to Random Email</a>
+<head>
+    <style>
+        body {
+            background-color: #eeeeee;
+        }
+        
+        .mainbody {
+            padding: 40px;
+            margin: auto;
+            text-align: center;
+        }
+        
+        .bigtitle {
+            color: #293a4b;          
+            font-size: 65px;
+            font-weight: bold;
+        }
+        
+        .littletitle {
+            color: #324558;          
+            font-size: 30px;
+            margin-bottom: 50px;
+            font-weight: bold;
+        }
+        
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 600px;
+            margin: auto;
+        }
+        
+        .btn {
+            background-color: #3b8fc7;
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.2s;
+        }
+        
+        .btn:hover {
+            background-color: #2171a7;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainbody">
+        <div class="bigtitle">Practice</div>
+        <div class="littletitle">Take the Test or Try Practice Emails</div>
+        
+        <div class="button-container">
+            <a class="btn" href="#/test">Take the Practice Test</a>
+            <a class="btn" href="#" onclick="goToRandomEmail(); return false;"  >Go to Random Practice Email</a>
+        </div>
     </div>
-</section>
+</body>
+</html>
