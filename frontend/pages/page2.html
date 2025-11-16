@@ -32,7 +32,6 @@
         }
         
         .btn {
-            background-color: #3b8fc7;
             color: white;
             padding: 20px;
             font-size: 20px;
@@ -46,7 +45,24 @@
         }
         
         .btn:hover {
-            background-color: #2171a7;
+            filter: brightness(0.4);
+        }
+        
+        .btn-intro {
+            background-color: #28a745;
+        }
+        
+        .btn-practical {
+            background-color: #007bff;
+        }
+        
+        .btn-advanced {
+            background-color: #dc3545;
+        }
+        
+        .btn-informative {
+            background-color: #ffc107;
+            color: #212529;
         }
     </style>
 </head>
@@ -54,64 +70,65 @@
     <div class="mainbody">
         <div class="bigtitle">Phishing Defense</div>
         <div class="littletitle">Please select a lesson to start</div>
+        <div class="littletitle">Legend: Green=Introduction, Blue=Intermediate Practical, Red=Advanced Practical, Yellow=Informative</div>
 
         <div class="button-container">
-            <a class="btn" href="#/lesson1">1. What is Phishing?</a>
-            <a class="btn" href="#/lesson2">2. History of Email Phishing</a>
-            <a class="btn" href="#/lesson3">3. Why do Attackers do Email Phishing?</a>
-            <a class="btn" href="#/lesson4">4. The Psychology of Phishing</a>
-            <a class="btn" href="#/lesson5">5. Bulk Phishing Scams</a>
-            <a class="btn" href="#/lesson6">6. Spear Phishing</a>
-            <a class="btn" href="#/lesson7">7. Whaling</a>
-            <a class="btn" href="#/lesson8">8. Business Email Compromise (BEC)</a>
-            <a class="btn" href="#/lesson9">9. SMS based phishing</a>
-            <a class="btn" href="#/lesson10">10. Deconstructing a Phishing Email</a>
-            <a class="btn" href="#/lesson11">11. Email Raw Source</a>
-            <a class="btn" href="#/lesson12">12. How to Read Headers</a>
-            <a class="btn" href="#/lesson13">13. From and Reply To</a>
-            <a class="btn" href="#/lesson14">14. Email Authentication Protocols</a>
-            <a class="btn" href="#/lesson15">15. Finding Links in the Raw Source</a>
-            <a class="btn" href="#/lesson16">16. IP Names in Urls</a>
-            <a class="btn" href="#/lesson17">17. Punycode for Homograph Attacks</a>
-            <a class="btn" href="#/lesson18">18. Most Dangerous File Types</a>
-            <a class="btn" href="#/lesson19">19. Spoofing & Impersonation</a>
-            <a class="btn" href="#/lesson20">20. Hover links before clicking</a>
-            <a class="btn" href="#/lesson21">21. Attachments and Links</a>
-            <a class="btn" href="#/lesson22">22. The Emotional Hooks</a>
-            <a class="btn" href="#/lesson23">23. Grammar and Tone</a>
-            <a class="btn" href="#/lesson24">24. Cultivating a Security Mindset</a>
-            <a class="btn" href="#/lesson25">25. Incident Response</a>
-            <a class="btn" href="#/lesson26">26. How to Properly Report a Phishing Email</a>
-            <a class="btn" href="#/lesson27">27. Multi-Factor Authentication</a>
-            <a class="btn" href="#/lesson28">28. Deepfakes and Hyper-Personalization</a>
-            <a class="btn" href="#/lesson29">29. Machine Learning for Phishing Detection</a>
-            <a class="btn" href="#/lesson30">30. Feature Extraction in Email Security</a>
-            <a class="btn" href="#/lesson31">31. Natural Language Processing in Email Filtering</a>
-            <a class="btn" href="#/lesson32">32. Analyzing Headers for Authenticity</a>
-            <a class="btn" href="#/lesson33">33. Detection via Link Analysis</a>
-            <a class="btn" href="#/lesson34">34. HTML and Script Indicators</a>
-            <a class="btn" href="#/lesson35">35. Behavioral Email Analysis</a>
-            <a class="btn" href="#/lesson36">36. Model Evaluation and Accuracy</a>
-            <a class="btn" href="#/lesson37">37. Adaptive Learning in Cybersecurity</a>
-            <a class="btn" href="#/lesson38">38. Phishing Detection Pipelines</a>
-            <a class="btn" href="#/lesson39">39. Deep Learning vs Traditional Models</a>
-            <a class="btn" href="#/lesson40">40. Image-Based Phishing Detection</a>
-            <a class="btn" href="#/lesson41">41. Evasion Techniques by Attackers</a>
-            <a class="btn" href="#/lesson42">42. Human-Centered Phishing Awareness</a>
-            <a class="btn" href="#/lesson43">43. Gamified Training and Simulations</a>
-            <a class="btn" href="#/lesson44">44. Corporate Policy and Email Hygiene</a>
-            <a class="btn" href="#/lesson45">45. Data Labeling for Model Training</a>
-            <a class="btn" href="#/lesson46">46. Explainable AI for Email Classification</a>
-            <a class="btn" href="#/lesson47">47. Ethical Use of AI in Cyber Defense</a>
-            <a class="btn" href="#/lesson48">48. Integration with Cloud Email Systems</a>
-            <a class="btn" href="#/lesson49">49. Incident Management Workflow</a>
-            <a class="btn" href="#/lesson50">50. Future of Phishing Prevention</a>
-            <a class="btn" href="#/lesson51">51. AI-Generated Phishing Content</a>
-            <a class="btn" href="#/lesson52">52. Phishing Through Collaboration Platforms</a>
-            <a class="btn" href="#/lesson53">53. Attachment Behavior Analysis</a>
-            <a class="btn" href="#/lesson54">54. Phishing Kits and Automation</a>
-            <a class="btn" href="#/lesson55">55. Regional and Language-Based Phishing</a>
-            <a class="btn" href="#/lesson56">56. Email Header Spoofing Defense</a>
+            <a class="btn btn-intro" href="#/lesson1">1. What is Phishing?</a>
+            <a class="btn btn-intro" href="#/lesson2">2. History of Email Phishing</a>
+            <a class="btn btn-intro" href="#/lesson3">3. Why do Attackers do Email Phishing?</a>
+            <a class="btn btn-intro" href="#/lesson4">4. The Psychology of Phishing</a>
+            <a class="btn btn-informative" href="#/lesson5">5. Bulk Phishing Scams</a>
+            <a class="btn btn-informative" href="#/lesson6">6. Spear Phishing</a>
+            <a class="btn btn-informative" href="#/lesson7">7. Whaling</a>
+            <a class="btn btn-informative" href="#/lesson8">8. Business Email Compromise (BEC)</a>
+            <a class="btn btn-informative" href="#/lesson9">9. SMS based phishing</a>
+            <a class="btn btn-practical" href="#/lesson10">10. Deconstructing a Phishing Email</a>
+            <a class="btn btn-advanced" href="#/lesson11">11. Email Raw Source</a>
+            <a class="btn btn-advanced" href="#/lesson12">12. How to Read Headers</a>
+            <a class="btn btn-advanced" href="#/lesson13">13. From and Reply To</a>
+            <a class="btn btn-advanced" href="#/lesson14">14. Email Authentication Protocols</a>
+            <a class="btn btn-advanced" href="#/lesson15">15. Finding Links in the Raw Source</a>
+            <a class="btn btn-advanced" href="#/lesson16">16. IP Names in Urls</a>
+            <a class="btn btn-advanced" href="#/lesson17">17. Punycode for Homograph Attacks</a>
+            <a class="btn btn-practical" href="#/lesson18">18. Most Dangerous File Types</a>
+            <a class="btn btn-practical" href="#/lesson19">19. Spoofing & Impersonation</a>
+            <a class="btn btn-practical" href="#/lesson20">20. Hover links before clicking</a>
+            <a class="btn btn-practical" href="#/lesson21">21. Attachments and Links</a>
+            <a class="btn btn-practical" href="#/lesson22">22. The Emotional Hooks</a>
+            <a class="btn btn-practical" href="#/lesson23">23. Grammar and Tone</a>
+            <a class="btn btn-practical" href="#/lesson24">24. Cultivating a Security Mindset</a>
+            <a class="btn btn-practical" href="#/lesson25">25. Incident Response</a>
+            <a class="btn btn-practical" href="#/lesson26">26. How to Properly Report a Phishing Email</a>
+            <a class="btn btn-informative" href="#/lesson27">27. Multi-Factor Authentication</a>
+            <a class="btn btn-informative" href="#/lesson28">28. Deepfakes and Hyper-Personalization</a>
+            <a class="btn btn-informative" href="#/lesson29">29. Machine Learning for Phishing Detection</a>
+            <a class="btn btn-informative" href="#/lesson30">30. Feature Extraction in Email Security</a>
+            <a class="btn btn-informative" href="#/lesson31">31. Natural Language Processing in Email Filtering</a>
+            <a class="btn btn-advanced" href="#/lesson32">32. Analyzing Headers for Authenticity</a>
+            <a class="btn btn-advanced" href="#/lesson33">33. Detection via Link Analysis</a>
+            <a class="btn btn-advanced" href="#/lesson34">34. HTML and Script Indicators</a>
+            <a class="btn btn-informative" href="#/lesson35">35. Behavioral Email Analysis</a>
+            <a class="btn btn-informative" href="#/lesson36">36. Model Evaluation and Accuracy</a>
+            <a class="btn btn-informative" href="#/lesson37">37. Adaptive Learning in Cybersecurity</a>
+            <a class="btn btn-informative" href="#/lesson38">38. Phishing Detection Pipelines</a>
+            <a class="btn btn-informative" href="#/lesson39">39. Deep Learning vs Traditional Models</a>
+            <a class="btn btn-informative" href="#/lesson40">40. Image-Based Phishing Detection</a>
+            <a class="btn btn-informative" href="#/lesson41">41. Evasion Techniques by Attackers</a>
+            <a class="btn btn-informative" href="#/lesson42">42. Human-Centered Phishing Awareness</a>
+            <a class="btn btn-informative" href="#/lesson43">43. Gamified Training and Simulations</a>
+            <a class="btn btn-informative" href="#/lesson44">44. Corporate Policy and Email Hygiene</a>
+            <a class="btn btn-informative" href="#/lesson45">45. Data Labeling for Model Training</a>
+            <a class="btn btn-informative" href="#/lesson46">46. Explainable AI for Email Classification</a>
+            <a class="btn btn-informative" href="#/lesson47">47. Ethical Use of AI in Cyber Defense</a>
+            <a class="btn btn-informative" href="#/lesson48">48. Integration with Cloud Email Systems</a>
+            <a class="btn btn-informative" href="#/lesson49">49. Incident Management Workflow</a>
+            <a class="btn btn-informative" href="#/lesson50">50. Future of Phishing Prevention</a>
+            <a class="btn btn-informative" href="#/lesson51">51. AI-Generated Phishing Content</a>
+            <a class="btn btn-informative" href="#/lesson52">52. Phishing Through Collaboration Platforms</a>
+            <a class="btn btn-informative" href="#/lesson53">53. Attachment Behavior Analysis</a>
+            <a class="btn btn-informative" href="#/lesson54">54. Phishing Kits and Automation</a>
+            <a class="btn btn-informative" href="#/lesson55">55. Regional and Language-Based Phishing</a>
+            <a class="btn btn-advanced" href="#/lesson56">56. Email Header Spoofing Defense</a>
         </div>
     </div>
 </body>
