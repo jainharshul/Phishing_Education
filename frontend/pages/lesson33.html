@@ -1,6 +1,18 @@
 <section>
     <h1>Lesson 33</h1>
     <section>
+    <style>
+        body {
+            background-color: #eeeeee;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .quiz {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+        }
+    </style> 
     <h1>Detection via Link Analysis</h1>
     
     <p>URL and link analysis target the conversion vector of phishing: the landing site. The analysis pipeline performs layered expansion and normalization—resolving URL shorteners, following redirect chains, normalizing punycode and percent-encoding, and recording each intermediate domain and HTTP response. Lexical analysis measures domain similarity to legitimate assets (edit distance, token overlap), analyzes token distributions in paths and queries, and assesses entropy and randomness consistent with automated domain generation. DNS and WHOIS telemetry contribute temporal signals: recent registration dates, privacy-protected WHOIS, and rapid registry changes are strong indicators in commodity phishing campaigns.</p>

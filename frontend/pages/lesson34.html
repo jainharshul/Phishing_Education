@@ -1,6 +1,18 @@
 <section>
     <h1>Lesson 34</h1>
     <section>
+    <style>
+        body {
+            background-color: #eeeeee;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .quiz {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+        }
+    </style> 
     <h1>HTML and Script Indicators</h1>
     
     <p>HTML-based phishing increasingly aims to replicate legitimate web login flows inside the email or to craft seamless redirections that reduce user suspicion. Detection begins with robust DOM parsing and structural analysis: counting interactive elements (forms, input fields), enumerating script tags and external script sources, and flagging inline event attributes (onClick, onSubmit). Indicators of deceptive behavior include forms whose action attributes point to domains incongruent with the sender, meta refresh tags that auto-redirect after brief delays, and inline JavaScript constructs that obfuscate network calls or decode embedded payloads at render time.</p>
