@@ -9,6 +9,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   const hfKeyInput = document.getElementById("hfKey");
   const saveKeyBtn = document.getElementById("saveKey");
 
+  const openWebAppBtn = document.getElementById("openWebApp");
+  openWebAppBtn.addEventListener("click", () => {
+    // Opens your FastAPI web app in a new tab
+    window.open("http://localhost:8000/", "_blank");
+  });
+
   // restore model + key from storage
   chrome.storage.sync.get(["modelChoice", "hfApiKey"], ({ modelChoice, hfApiKey }) => {
     if (modelChoice) modelSelect.value = modelChoice;
