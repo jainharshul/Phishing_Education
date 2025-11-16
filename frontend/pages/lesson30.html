@@ -1,6 +1,18 @@
 <section>
     <h1>Lesson30</h1>
     <section>
+    <style>
+        body {
+            background-color: #eeeeee;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .quiz {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+        }
+    </style> 
     <h1>Feature Extraction in Email Security</h1>
     
     <p>Feature extraction converts the heterogeneous components of each email into a structured, machine-consumable representation. The process is intentionally multimodal: headers, transport metadata, textual body, HTML DOM, attachments, URLs, and behavioral telemetry are featurized in parallel, then fused. Header parsing yields features such as SPF/DKIM/DMARC outcomes, originating IP and ASN, reverse DNS heuristics, hop-time deltas across Received lines, and alignment indicators (whether the visible From domain aligns with authenticated domains). Transport-level signals include TLS properties, SMTP banner anomalies, and volume-based reputation metrics derived from historical flows.</p>

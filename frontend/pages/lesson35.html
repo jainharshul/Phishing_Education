@@ -1,6 +1,18 @@
 <section>
     <h1>Lesson 35</h1>
     <section>
+    <style>
+        body {
+            background-color: #eeeeee;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .quiz {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+        }
+    </style> 
     <h1>Behavioral Email Analysis</h1>
     
     <p>Behavioral analysis elevates detection from pattern matching to contextual risk inference by modeling normative sender and recipient behaviors and highlighting deviations indicative of compromise or social-engineering escalation. Sender models encode historical behavior vectors: average send cadence, typical recipient distributions, message-size histograms, and signature metadata. Deviations—sudden out-of-cycle high-value requests, novel recipient sets, or atypical attachment types—are scored using probabilistic anomaly detectors (e.g., isolation forests, Bayesian change-point models). Recipient-side models capture social graphs and expected interaction modalities; an email that asks a low-frequency collaborator to approve finance changes triggers a higher posterior risk than one between frequent contacts.</p>
