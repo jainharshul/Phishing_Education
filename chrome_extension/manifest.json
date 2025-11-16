@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Gone Phishing",
+  "version": "0.1",
+  "description": "Analyze your emails for phishing threats.",
+  "action": {
+    "default_title": "Gone Phishing",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": [
+  "mail.google.com/*",
+  "http://localhost:8000/*"
+],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
