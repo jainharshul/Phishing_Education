@@ -1,4 +1,4 @@
-# server.py
+# server.py 
 import os
 
 from fastapi import FastAPI
@@ -20,6 +20,7 @@ FRONTEND_DIR = os.path.join(BASE_DIR, "..", "frontend")
 app.mount("/static", StaticFiles(directory=FRONTEND_DIR), name="static")
 
 # --- CORS so Chrome extension can call the API ---
+
 
 app.add_middleware(
     CORSMiddleware,

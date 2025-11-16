@@ -45,24 +45,40 @@
         }
         
         .btn:hover {
-            filter: brightness(0.4);
+            filter: brightness(0.9);
         }
         
-        .btn-intro {
-            background-color: #28a745;
+         .btn-intro {
+            background-color: #22a540;
+        }
+        
+        .btn-intro:hover {
+            background-color: #218838;
         }
         
         .btn-practical {
-            background-color: #007bff;
+            background-color: #0278f7;
+        }
+        
+        .btn-practical:hover {
+            background-color: #0264cc;
         }
         
         .btn-advanced {
-            background-color: #dc3545;
+            background-color: #e23243;
+        }
+        
+        .btn-advanced:hover {
+            background-color: #c01f30;
         }
         
         .btn-informative {
-            background-color: #ffc107;
+            background-color: #f7b902;
             color: #212529;
+        }
+        
+        .btn-informative:hover {
+            background-color: #cf9b00;
         }
     </style>
 </head>
@@ -70,7 +86,9 @@
     <div class="mainbody">
         <div class="bigtitle">Phishing Defense</div>
         <div class="littletitle">Please select a lesson to start</div>
-        <div class="littletitle">Legend: Green=Introduction, Blue=Intermediate Practical, Red=Advanced Practical, Yellow=Informative</div>
+        <div class="littletitle">
+        Legend: <span style="color: #22a540;">Green</span>=Introduction, <span style="color: #0278f7;">Blue</span>=Intermediate Practical, <span style="color: #e23243;">Red</span>=Advanced Practical, <span style="color: #f7b902;">Yellow</span>=Informative
+        </div>
 
         <div class="button-container">
             <a class="btn btn-intro" href="#/lesson1">1. What is Phishing?</a>
