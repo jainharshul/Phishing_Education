@@ -10,15 +10,15 @@ function mount(id, html) {
 window.addEventListener("DOMContentLoaded", () => {
   mount("navbar", renderNavbar());
   mount("footer", renderFooter());
-  initBackButton(); // Initialize back button functionality
+  initBackButton(); 
   initRouter();
   
-  // Track page changes for back button
+
   window.addEventListener('hashchange', () => {
       const currentHash = window.location.hash || '#/';
       addToHistory(currentHash);
   });
 
-  // Add initial page to history
+
   addToHistory(window.location.hash || '#/');
 });

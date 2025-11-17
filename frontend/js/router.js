@@ -5,6 +5,7 @@ const routes = {
     "/page2": "/static/pages/page2.html",  
     "/page3": "/static/pages/page3.html",  
     "/test": "/static/pages/test.html", 
+    "/testeasy": "/static/pages/testeasy.html",
     "/lesson1": "/static/pages/lesson1.html",
     "/lesson2": "/static/pages/lesson2.html",
     "/lesson3": "/static/pages/lesson3.html",
@@ -243,16 +244,53 @@ window.gradeTest = function() {
 
     document.getElementById("scoreValue").textContent = score;
     document.getElementById("questionResults").innerHTML = resultsHTML;
-    document.getElementById("results").style.display = "block";
+
     
-    const percentage = (score / 59) * 100;
-    document.getElementById("progressBar").style.width = `${percentage}%`;
-    
-    document.getElementById("results").scrollIntoView({ behavior: 'smooth' });
 };
 
+window.gradeTestEasy = function() {
+    const correctAnswers = {
+        q1: "b",
+        q2: "c",
+        q3: "c",
+        q4: "b",
+        q5: "c",
+        q6: "a",
+        q7: "c",
+        q8: "d",
+        q9: "b",
+        q10: "a",
+        q11: "b",
+        q12: "c",
+        q13: "c",
+        q14: "a",
+        q15: "d",
 
+    };
 
+    let score = 0;
+    let resultsHTML = "";
+
+    for (let i = 1; i <= 15; i++) {
+        const questionId = `q${i}`;
+        const radios = document.querySelectorAll(`input[name="${questionId}"]:checked`);
+        const userAnswer = radios.length > 0 ? radios[0].value : "";
+        const isCorrect = userAnswer === correctAnswers[questionId];
+
+        if (isCorrect) {
+            score++;
+            resultsHTML += `<div class="question-result correct"><strong>Question ${i}:</strong> Correct</div>`;
+        } else {
+            resultsHTML += `<div class="question-result incorrect"><strong>Question ${i}:</strong> Incorrect. Correct answer: ${correctAnswers[questionId]}</div>`;
+        }
+    }
+
+    document.getElementById("scoreValue").textContent = score;
+    document.getElementById("questionResults").innerHTML = resultsHTML;
+
+    
+
+};
 
   
   
