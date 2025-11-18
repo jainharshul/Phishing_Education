@@ -1,4 +1,5 @@
-# server.py 
+# main.py (or server.py)
+
 import os
 
 from fastapi import FastAPI
@@ -7,7 +8,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from phishing_model import predict_email  # uses your saved pipeline
+from phishing_model import predict_email  # uses your saved pipelines
 
 app = FastAPI(title="FastAPI + Scalable Frontend + Phishing API")
 
@@ -21,7 +22,6 @@ app.mount("/static", StaticFiles(directory=FRONTEND_DIR), name="static")
 
 # --- CORS so Chrome extension can call the API ---
 
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],          # you can tighten later if you want
@@ -34,19 +34,24 @@ app.add_middleware(
 
 class EmailRequest(BaseModel):
     text: str
+    # "svm", "logreg", or None (let backend pick default)
+    model: str | None = None
+
 
 # Chrome extension (and web app) can call this
 @app.post("/predict-phishing-pipeline")
 async def predict_phishing(req: EmailRequest):
     """
-    Request body: {"text": "email content"}
+    Request body: {"text": "email content", "model": "svm" | "logreg" | null}
     """
-    return predict_email(req.text)
+    return predict_email(req.text, model=req.model)
+
 
 # Optional: also expose under /api/... if you want the web app to call it
 @app.post("/api/predict-phishing-pipeline")
 async def predict_phishing_api(req: EmailRequest):
-    return predict_email(req.text)
+    return predict_email(req.text, model=req.model)
+
 
 # --- Sample API routes for your web app ---
 
@@ -54,9 +59,11 @@ async def predict_phishing_api(req: EmailRequest):
 def health():
     return {"status": "ok"}
 
+
 @app.get("/api/user")
 def get_user():
     return {"name": "Harshul", "role": "Engineer"}
+
 
 # --- Serve SPA shell (index.html) ---
 

@@ -156,11 +156,11 @@ async function predictWithBertZSC(text, hfApiKey) {
 
 // ===== New: Python pipeline via local FastAPI server =====
 // Calls http://localhost:8000/predict-phishing-pipeline
-async function predictWithPipeline(text) {
+async function predictWithPipeline(text, backendModel = "logreg") {
   const resp = await fetch("http://localhost:8000/predict-phishing-pipeline", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ text })
+    body: JSON.stringify({ text, model: backendModel })  // <-- send model
   });
 
   if (!resp.ok) {
@@ -187,12 +187,24 @@ async function predictText(text, { model = "tfidf", hfApiKey } = {}) {
   if (model === "bert") {
     return predictWithBertZSC(text, hfApiKey);
   }
-  if (model === "pipeline") {
-    return predictWithPipeline(text);
+
+  if (model === "pipeline_logreg") {
+    return predictWithPipeline(text, "logreg");
   }
-  // default: JS TF-IDF model
+
+  if (model === "pipeline_svm") {
+    return predictWithPipeline(text, "svm");
+  }
+
+  // (Optional fallback for any old 'pipeline' value)
+  if (model === "pipeline") {
+    return predictWithPipeline(text, "logreg");
+  }
+
+  // default: in-extension TF-IDF model
   return predictWithTfidf(text);
 }
+
 
 // Expose to popup
 window.predictText = predictText;
